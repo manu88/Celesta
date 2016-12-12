@@ -91,7 +91,7 @@ CXXFLAGS+= -DENABLE_ELEMENT_SELECTOR -DUSE_WEB_SERVER  -DUSE_NETWORK -DUSE_GPIO 
 CXXFLAGS+= -DUSE_GRAPHICS_EXTRA -DHAVE_JPEG_LIB
  
 
-# BASE CORE SOURES
+# BASE CORE SOURCES
 
 SRC+= ../Core/Internal/AbstractController.cpp \
 		../Core/Internal/AbstractDelegate.cpp \
@@ -138,7 +138,6 @@ SRC+= ../Core/GX/DisplayController.cpp \
 		../Core/GX/GXElement.cpp \
 		../Core/GX/GXPath.cpp \
 		../Core/GX/GXAnimation.cpp \
-		../Core/GX/Animations.cpp \
 		../Core/GX/GXImage.cpp \
 		../Core/GX/GXScene.cpp \
 		../Core/GX/GXAsyncPainter.cpp \
@@ -149,8 +148,7 @@ SRC+= ../Core/GX/DisplayController.cpp \
 
 # later move to another module
 
-SRC+= ../Core/GXDataType/Curve.cpp \
-		../Core/GXDataType/GXColors.cpp \
+SRC+= ../Core/GXDataType/GXColors.cpp \
 		../Core/GXDataType/GXGeometry.cpp \
 		../Core/GXExtra/GraphicsComponents.cpp \
 		../Core/GXExtra/GXVideo.cpp \
