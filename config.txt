@@ -1,0 +1,6 @@
+AppName = TestApp
+
+ScriptFile = main.js
+
+
+JS_Dir = JS/
