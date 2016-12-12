@@ -28,8 +28,8 @@ CXXFLAGS+= -g -DTARGET_RASPBERRY_PI
 
 TargetName = JSCenter
 
-UserSRC = main.cpp \
-	Controller.cpp \
+UserSRC = src/main.cpp \
+	src/Controller.cpp \
 
 INCLUDES+= -I/opt/vc/include/ -I/opt/vc/include/interface/vcos/pthreads/ -I/opt/vc/include/interface/vmcs_host/linux/ 
 
@@ -38,42 +38,42 @@ CXXFLAGS+= -std=c++14   -Wall
 
 # add GX
 
-LDFLAGS+= -L/opt/vc/lib -lGLESv2 -lEGL -ljpeg -lfreetype
+LDFLAGS+= -L/opt/vc/lib -lGLESv2 -lEGL -ljpeg -lfreetype -lcurl -lasound
 INCLUDES+= -I/usr/include/freetype2/
 
 ################################################################################################
 # AJOUTS OMX
-CXXFLAGS+= -D_LARGEFILE64_SOURCE 
-CXXFLAGS+= -D_FILE_OFFSET_BITS=64  
-CXXFLAGS+= -D__VIDEOCORE4__
-CXXFLAGS+= -U_FORTIFY_SOURCE -Wall  
-
-CXXFLAGS+= -fPIC
-CXXFLAGS+= -DPIC
-CXXFLAGS+= -DTARGET_POSIX
-CXXFLAGS+= -D_REENTRANT
-CXXFLAGS+= -D__STDC_CONSTANT_MACROS 
-CXXFLAGS+= -D__STDC_LIMIT_MACROS 
-
-CXXFLAGS+= -DUSE_OPENMAXIL
-CXXFLAGS+= -DTARGET_LINUX 
-#CXXFLAGS+= -DUSE_EXTERNAL_FFMPEG
-CXXFLAGS+= -DHAVE_LIBAVUTIL_OPT_H
-CXXFLAGS+= -DHAVE_LIBAVUTIL_MEM_H
-CXXFLAGS+= -DHAVE_LIBAVFORMAT_AVFORMAT_H
-CXXFLAGS+= -DHAVE_LIBSWRESAMPLE_SWRESAMPLE_H
-CXXFLAGS+= -DHAVE_LIBAVUTIL_AVUTIL_H
-CXXFLAGS+= -DHAVE_LIBAVFILTER_AVFILTER_H
-CXXFLAGS+= -DHAVE_OMXLIB
-
-CXXFLAGS+= -DUSE_EXTERNAL_LIBBCM_HOST
-
-CXXFLAGS+= -DUSE_EXTERNAL_OMX -DOMX -DOMX_SKIP64BIT 
-
+CXXFLAGS+=-D__STDC_CONSTANT_MACROS 
+CXXFLAGS+=-D__STDC_LIMIT_MACROS 
+CXXFLAGS+=-DTARGET_POSIX 
+CXXFLAGS+=-DTARGET_LINUX 
+CXXFLAGS+=-fPIC 
+CXXFLAGS+=-DPIC 
+CXXFLAGS+=-D_REENTRANT 
+CXXFLAGS+=-D_LARGEFILE64_SOURCE 
+CXXFLAGS+=-D_FILE_OFFSET_BITS=64 
+CXXFLAGS+=-DHAVE_CMAKE_CONFIG 
+CXXFLAGS+=-D__VIDEOCORE4__ 
+CXXFLAGS+=-U_FORTIFY_SOURCE 
+CXXFLAGS+=-Wall 
+CXXFLAGS+=-DHAVE_OMXLIB 
+CXXFLAGS+=-DUSE_EXTERNAL_FFMPEG  
+CXXFLAGS+=-DHAVE_LIBAVCODEC_AVCODEC_H 
+CXXFLAGS+=-DHAVE_LIBAVUTIL_OPT_H 
+CXXFLAGS+=-DHAVE_LIBAVUTIL_MEM_H 
+CXXFLAGS+=-DHAVE_LIBAVUTIL_AVUTIL_H 
+CXXFLAGS+=-DHAVE_LIBAVFORMAT_AVFORMAT_H 
+CXXFLAGS+=-DHAVE_LIBAVFILTER_AVFILTER_H 
+CXXFLAGS+=-DHAVE_LIBSWRESAMPLE_SWRESAMPLE_H 
+CXXFLAGS+=-DOMX -DOMX_SKIP64BIT 
+CXXFLAGS+=-ftree-vectorize 
+CXXFLAGS+=-DUSE_EXTERNAL_OMX 
+CXXFLAGS+=-DTARGET_RASPBERRY_PI 
+CXXFLAGS+=-DUSE_EXTERNAL_LIBBCM_HOST
 INCLUDES+= -ICore/GXExtra/OMX/linux
 
 ## MODIF
-INCLUDES+= -ICore/GXExtra/OMX/ -Iffmpeg_compiled/usr/local/include/
+INCLUDES+= -ICore/GXExtra/OMX/ -I./ffmpeg_compiled/usr/local/include/
 
 # dbus - a virer 
 INCLUDES+= -I /usr/include/dbus-1.0 -I /usr/lib/arm-linux-gnueabihf/dbus-1.0/include
@@ -89,7 +89,7 @@ LDFLAGS+= -lopenmaxil
 
 CXXFLAGS+= -DENABLE_ELEMENT_SELECTOR -DUSE_WEB_SERVER  -DUSE_NETWORK -DUSE_GPIO -DUSE_GRAPHICS -DUSE_JAVA_INTERPRETER -DUSE_GRAPHICS_HELPERS -DUSE_JSON_PARSER
 CXXFLAGS+= -DUSE_GRAPHICS_EXTRA -DHAVE_JPEG_LIB
- 
+CXXFLAGS+= -DUSE_GRAPHIC_UI -DUSE_GXTOUCH -DUSE_URL
 
 # BASE CORE SOURCES
 
@@ -107,12 +107,15 @@ SRC+= Core/Internal/AbstractController.cpp \
 		Core/Scheduler/Event.cpp \
 		Core/Scheduler/Dispatch.cpp \
 		Core/Scheduler/Timecode.cpp \
+		Core/Scheduler/IPC.cpp \
 		Core/Application/ApplicationBase.cpp \
+		Core/Application/FileManager.cpp \
 		
 # Web Component
 
 SRC+= Core/Web/WebServer.cpp \
 		Core/Web/web/mongoose.c \
+		Core/Web/Url.cpp \
 		
 # JSON Parser
 SRC+= Core/Parsers/JSONParser.cpp \
@@ -160,6 +163,24 @@ SRC+= Core/JSMachine/JSMachine.cpp \
 		Core/JSMachine/TinyJS/TinyJS.cpp \
 		Core/JSMachine/TinyJS/TinyJS_Functions.cpp \
 		Core/JSMachine/TinyJS/TinyJS_MathFunctions.cpp \
+# UI
+
+SRC+= Core/UI/UI.cpp \
+		Core/UI/UIButton.cpp \
+		Core/UI/UIImage.cpp \
+		Core/UI/UILabel.cpp \
+		Core/UI/UINotification.cpp \
+		Core/UI/UISlider.cpp \
+		Core/UI/UIVideo.cpp \
+		Core/UI/UIView.cpp \
+		Core/UI/UIViewController.cpp \		
+
+
+# GXTouch
+
+SRC+= Core/GXTouch/GXTouch.cpp \
+		Core/GXTouch/Peripherals.cpp \
+
 
 ################################################################################################
 # AJOUTS OMX
@@ -173,6 +194,7 @@ SRC+= Core/GXExtra/OMX/linux/XMemUtils.cpp \
 		Core/GXExtra/OMX/OMXOverlayCodecText.cpp \
 		Core/GXExtra/OMX/BitstreamConverter.cpp \
 		Core/GXExtra/OMX/linux/RBP.cpp \
+		Core/GXExtra/OMX/linux/OMXAlsa.cpp \
 		Core/GXExtra/OMX/OMXThread.cpp \
 		Core/GXExtra/OMX/OMXReader.cpp \
 		Core/GXExtra/OMX/OMXStreamInfo.cpp \
