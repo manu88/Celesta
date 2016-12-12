@@ -14,6 +14,8 @@ Broadway depends on the following Libraries, by modules
 - GX , GX_EXTRA , GX_HELPERS freefont
 - XML : xerces-c
 
+libCurl
+sudo apt-get install libcurl4-openssl-dev
 
 #####################################
 # OSCPACK
@@ -47,6 +49,8 @@ sudo apt-get install libavcodec-dev  -y
 sudo apt-get install libavformat-dev -y
 
 sudo apt-get -y install libboost1.50-dev
+
+sudo apt-get -y install libdbus-1-dev
 
 
 ##################################
