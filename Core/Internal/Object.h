@@ -30,10 +30,7 @@ public:
     
     ~ObjectWatcher();
     
-    void addObject( Object* obj )
-    {
-        _objList.push_back(obj);
-    }
+    void addObject( Object* obj );
     
     void removeObject( Object* obj );
     void removeAndDeleteAllObjects( );

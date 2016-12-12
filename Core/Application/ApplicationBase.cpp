@@ -46,7 +46,7 @@ ApplicationBase::~ApplicationBase()
 bool ApplicationBase::parseConfig()
 {
     _appData.clear();
-    
+    printf("Parse file config %s\n" , _fileConfig.c_str());
     if ( !_appData.parseFile(_fileConfig, '=') )
         return false;
     
@@ -130,6 +130,7 @@ bool ApplicationBase::initializeApp()
 {
     if (!parseConfig() )
     {
+        printf("Error : unable to parse config file\n");
         return false;
     }
     
@@ -191,12 +192,17 @@ bool ApplicationBase::start()
         _quitSent = false;
         
         if ( !initializeApp() )
+        {
+            printf("Error initializeApp\n");
             return false;
+        }
         
 
         if ( !applicationWillStart() )
+        {
+            printf("Error applicationWillStart\n");
             return false;
-        
+        }
 
         
         _startTime = Timecode::getCurrent();

@@ -36,9 +36,9 @@ int main(int argc, const char * argv[])
     
     /**/
     {
-        Controller player( conf );
+        Controller controller( conf );
         
-        if ( !player.start() )
+        if ( !controller.start() )
         {
             Log::log("ERROR : Return to OS ");
         }

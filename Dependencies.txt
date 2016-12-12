@@ -1,0 +1,57 @@
+
+#####################################
+#
+#   Dependencies
+#
+#####################################
+
+- gcc 4.7 min needs is used
+
+sudo apt-get install gcc-4.7
+
+Broadway depends on the following Libraries, by modules
+- Network Module : oscpack
+- GX , GX_EXTRA , GX_HELPERS freefont
+- XML : xerces-c
+
+
+#####################################
+# OSCPACK
+
+wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/oscpack/oscpack_1_1_0.zip
+unzip -a oscpack_1_1_0.zip
+cd oscpack_1_1_0
+make
+sudo make install
+
+
+#####################################
+# BCM2835
+
+
+ wget  http://www.airspayce.com/mikem/bcm2835/bcm2835-1.50.tar.gz
+tar zxvf bcm2835-1.38.tar.gz
+cd bcm2835-1.38
+./configure
+make
+sudo make check
+sudo make install
+
+#####################################
+# libjpeg
+sudo apt-get install  libjpeg-dev -y
+
+#####################################
+# GXVideo
+sudo apt-get install libavcodec-dev  -y
+sudo apt-get install libavformat-dev -y
+
+sudo apt-get -y install libboost1.50-dev
+
+
+##################################
+# rpi-update ?
+echo "Installing the rpi-update script..."
+sudo wget http://goo.gl/1BOfJ -O /usr/bin/rpi-update && sudo chmod +x /usr/bin/rpi-update
+echo "Updating firmware..."
+sudo rpi-update

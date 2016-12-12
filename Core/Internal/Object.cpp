@@ -53,6 +53,12 @@ ObjectWatcher::~ObjectWatcher()
 
 }
 
+void ObjectWatcher::addObject( Object* obj )
+{
+    printf("\t Add object %s\n" , obj->getClassName().c_str() );
+    _objList.push_back(obj);
+}
+
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
