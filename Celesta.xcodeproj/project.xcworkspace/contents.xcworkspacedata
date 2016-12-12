@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CelestaCore.xcodeproj">
+      location = "self:/Users/manueldeneu/Documents/projets/dev/Celesta/Celesta.xcodeproj">
    </FileRef>
 </Workspace>
