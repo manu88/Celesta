@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "845B17C6E51713343B33F83B667B230F94C25421",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F13F1BBD363A29E0B28DA8E0EB5813F6DB4E5797" : 9223372036854775807,
+    "845B17C6E51713343B33F83B667B230F94C25421" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "38EC51CF-4C2C-4EBC-A15A-DAE3A11F4FDF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F13F1BBD363A29E0B28DA8E0EB5813F6DB4E5797" : "Celesta\/",
+    "845B17C6E51713343B33F83B667B230F94C25421" : "Celesta\/Core\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CelestaCore",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CelestaCore\/CelestaCore.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/manu88\/Broadway_Core",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "845B17C6E51713343B33F83B667B230F94C25421"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/manu88\/Celesta.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F13F1BBD363A29E0B28DA8E0EB5813F6DB4E5797"
+    }
+  ]
+}
