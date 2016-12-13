@@ -165,6 +165,7 @@
 		59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */; };
 		59EC755E1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
 		59EC755F1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
+		59EC75631E0060B000EB37C2 /* DictionaryUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -402,6 +403,9 @@
 		59EC755A1E004DD700EB37C2 /* PListUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PListUnitTest.hpp; path = Tests/PListUnitTest.hpp; sourceTree = "<group>"; };
 		59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dictionnary.cpp; sourceTree = "<group>"; };
 		59EC755D1E005BBC00EB37C2 /* Dictionnary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dictionnary.hpp; sourceTree = "<group>"; };
+		59EC75601E005EB100EB37C2 /* SequenceType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceType.hpp; sourceTree = "<group>"; };
+		59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DictionaryUnitTest.cpp; path = Tests/DictionaryUnitTest.cpp; sourceTree = "<group>"; };
+		59EC75621E0060B000EB37C2 /* DictionaryUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DictionaryUnitTest.hpp; path = Tests/DictionaryUnitTest.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +539,7 @@
 			children = (
 				595749C21DFEFAD5005B6AD4 /* Database.cpp */,
 				595749C31DFEFAD5005B6AD4 /* Database.h */,
+				59EC75601E005EB100EB37C2 /* SequenceType.hpp */,
 				59EC755D1E005BBC00EB37C2 /* Dictionnary.hpp */,
 				59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */,
 				595749C41DFEFAD5005B6AD4 /* Date.cpp */,
@@ -901,6 +906,8 @@
 		59EC75581E004D9F00EB37C2 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */,
+				59EC75621E0060B000EB37C2 /* DictionaryUnitTest.hpp */,
 				59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */,
 				59EC754F1E004A8700EB37C2 /* VariantUnitTest.hpp */,
 				59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */,
@@ -1123,6 +1130,7 @@
 				59574B5C1DFFE565005B6AD4 /* StringOperations.cpp in Sources */,
 				59574B5D1DFFE565005B6AD4 /* Date.cpp in Sources */,
 				59574B5E1DFFE565005B6AD4 /* CanPlateformImpl.cpp in Sources */,
+				59EC75631E0060B000EB37C2 /* DictionaryUnitTest.cpp in Sources */,
 				59574B5F1DFFE565005B6AD4 /* GXAsyncPainter.cpp in Sources */,
 				59574B601DFFE565005B6AD4 /* Log.cpp in Sources */,
 				59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */,

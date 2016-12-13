@@ -62,6 +62,7 @@ namespace ClassNames
     static const std::string Element             = "Element";
     static const std::string Thread              = "Thread";
     
+    static const std::string Dictionary          = "Dictionary";
     static const std::string Root                = "Root";
 
     static const std::string Dispatch            = "Dispatch";
