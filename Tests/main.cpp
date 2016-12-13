@@ -13,9 +13,12 @@
 #include "VariantUnitTest.hpp"
 #include "PListUnitTest.hpp"
 #include "DictionaryUnitTest.hpp"
+#include "TimerUnitTest.hpp"
+
 
 int main(int argc, const char * argv[])
 {
+
     
     printf("Starting Celesta unit Tests\n");
     
@@ -28,6 +31,9 @@ int main(int argc, const char * argv[])
         
         DictionaryUnitTest t2;
         t2.run();
+        
+        TimerUnitTest t3;
+        t3.run();
         
     }
     

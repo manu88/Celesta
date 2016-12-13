@@ -26,7 +26,7 @@
 
 
 class Variant;
-class ValueImpl;
+
 class VariantList;
 
 typedef std::vector<uint8_t> BytesList;

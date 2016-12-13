@@ -215,6 +215,9 @@
 #include "Internal/FileSystem.h"
 #include "Internal/Utils.h"
 
+#include "RunLoop/RunLoop.hpp"
+#include "RunLoop/Timer.hpp"
+
 #include "Scheduler/Chrono.h"
 #include "Scheduler/IPC.h"
 #include "Log/Log.h"

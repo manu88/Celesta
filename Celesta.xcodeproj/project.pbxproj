@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5922E87D1E0075B800E988A1 /* RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E87B1E0075B800E988A1 /* RunLoop.cpp */; };
+		5922E87E1E0075B800E988A1 /* RunLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E87B1E0075B800E988A1 /* RunLoop.cpp */; };
+		5922E8861E0076F200E988A1 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E8841E0076F200E988A1 /* Timer.cpp */; };
+		5922E8871E0076F200E988A1 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E8841E0076F200E988A1 /* Timer.cpp */; };
+		5922E88A1E00773000E988A1 /* TimerUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E8881E00773000E988A1 /* TimerUnitTest.cpp */; };
+		5922E88D1E0077FF00E988A1 /* RunLoopSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5922E88B1E0077FF00E988A1 /* RunLoopSource.cpp */; };
 		595748141DFEF578005B6AD4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595748131DFEF578005B6AD4 /* main.cpp */; };
 		595749AA1DFEF72F005B6AD4 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 595749A71DFEF72F005B6AD4 /* libcurl.4.dylib */; };
 		595749AB1DFEF72F005B6AD4 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595749A81DFEF72F005B6AD4 /* libfreetype.a */; };
@@ -223,6 +229,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5922E87B1E0075B800E988A1 /* RunLoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RunLoop.cpp; path = RunLoop/RunLoop.cpp; sourceTree = "<group>"; };
+		5922E87C1E0075B800E988A1 /* RunLoop.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RunLoop.hpp; path = RunLoop/RunLoop.hpp; sourceTree = "<group>"; };
+		5922E8841E0076F200E988A1 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = RunLoop/Timer.cpp; sourceTree = "<group>"; };
+		5922E8851E0076F200E988A1 /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = RunLoop/Timer.hpp; sourceTree = "<group>"; };
+		5922E8881E00773000E988A1 /* TimerUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimerUnitTest.cpp; path = Tests/TimerUnitTest.cpp; sourceTree = "<group>"; };
+		5922E8891E00773000E988A1 /* TimerUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TimerUnitTest.hpp; path = Tests/TimerUnitTest.hpp; sourceTree = "<group>"; };
+		5922E88B1E0077FF00E988A1 /* RunLoopSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RunLoopSource.cpp; path = RunLoop/RunLoopSource.cpp; sourceTree = "<group>"; };
+		5922E88C1E0077FF00E988A1 /* RunLoopSource.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RunLoopSource.hpp; path = RunLoop/RunLoopSource.hpp; sourceTree = "<group>"; };
 		595748081DFEF554005B6AD4 /* Celesta */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Celesta; sourceTree = BUILT_PRODUCTS_DIR; };
 		595748131DFEF578005B6AD4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		595749A71DFEF72F005B6AD4 /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = ../../../../../../../usr/lib/libcurl.4.dylib; sourceTree = "<group>"; };
@@ -437,6 +451,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5922E8831E0075BD00E988A1 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				5922E88B1E0077FF00E988A1 /* RunLoopSource.cpp */,
+				5922E88C1E0077FF00E988A1 /* RunLoopSource.hpp */,
+				5922E87B1E0075B800E988A1 /* RunLoop.cpp */,
+				5922E87C1E0075B800E988A1 /* RunLoop.hpp */,
+				5922E8841E0076F200E988A1 /* Timer.cpp */,
+				5922E8851E0076F200E988A1 /* Timer.hpp */,
+			);
+			name = RunLoop;
+			sourceTree = "<group>";
+		};
 		595747FF1DFEF554005B6AD4 = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +508,8 @@
 		595749B01DFEFAD5005B6AD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				59574A6A1DFEFAD5005B6AD4 /* Internal */,
+				5922E8831E0075BD00E988A1 /* RunLoop */,
 				595749B11DFEFAD5005B6AD4 /* Application */,
 				595749B61DFEFAD5005B6AD4 /* Audio */,
 				595749BE1DFEFAD5005B6AD4 /* Config.h */,
@@ -492,7 +521,6 @@
 				595749EE1DFEFAD5005B6AD4 /* GXExtra */,
 				59574A541DFEFAD5005B6AD4 /* GXTouch */,
 				59574A591DFEFAD5005B6AD4 /* Interfaces */,
-				59574A6A1DFEFAD5005B6AD4 /* Internal */,
 				59574A7D1DFEFAD5005B6AD4 /* JSMachine */,
 				59574A891DFEFAD5005B6AD4 /* Log */,
 				59574A8C1DFEFAD5005B6AD4 /* Network */,
@@ -910,6 +938,8 @@
 		59EC75581E004D9F00EB37C2 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				5922E8881E00773000E988A1 /* TimerUnitTest.cpp */,
+				5922E8891E00773000E988A1 /* TimerUnitTest.hpp */,
 				59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */,
 				59EC75621E0060B000EB37C2 /* DictionaryUnitTest.hpp */,
 				59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */,
@@ -1037,6 +1067,7 @@
 				59574AE11DFEFAD5005B6AD4 /* GXImage.cpp in Sources */,
 				59574AE41DFEFAD5005B6AD4 /* GXTextRenderer.cpp in Sources */,
 				59574B2A1DFEFAD5005B6AD4 /* IPC.cpp in Sources */,
+				5922E8861E0076F200E988A1 /* Timer.cpp in Sources */,
 				59574B0D1DFEFAD5005B6AD4 /* GpioInterface.cpp in Sources */,
 				59574B171DFEFAD5005B6AD4 /* Memory.cpp in Sources */,
 				59574B0F1DFEFAD5005B6AD4 /* GpioPlateformImpl.cpp in Sources */,
@@ -1075,6 +1106,7 @@
 				59574AE81DFEFAD5005B6AD4 /* GXColors.cpp in Sources */,
 				59574B281DFEFAD5005B6AD4 /* Dispatch.cpp in Sources */,
 				59574B2B1DFEFAD5005B6AD4 /* Timecode.cpp in Sources */,
+				5922E87D1E0075B800E988A1 /* RunLoop.cpp in Sources */,
 				59574B311DFEFAD5005B6AD4 /* UISlider.cpp in Sources */,
 				59574AD81DFEFAD5005B6AD4 /* Database.cpp in Sources */,
 				59574B371DFEFAD5005B6AD4 /* WebServer.cpp in Sources */,
@@ -1117,6 +1149,7 @@
 				59574B4B1DFFE565005B6AD4 /* UIView.cpp in Sources */,
 				59574B4C1DFFE565005B6AD4 /* GXAnimation.cpp in Sources */,
 				59574B4D1DFFE565005B6AD4 /* GXImage.cpp in Sources */,
+				5922E88A1E00773000E988A1 /* TimerUnitTest.cpp in Sources */,
 				59574B4E1DFFE565005B6AD4 /* GXTextRenderer.cpp in Sources */,
 				59574B4F1DFFE565005B6AD4 /* IPC.cpp in Sources */,
 				59574B501DFFE565005B6AD4 /* GpioInterface.cpp in Sources */,
@@ -1143,6 +1176,7 @@
 				59574B621DFFE565005B6AD4 /* Object.cpp in Sources */,
 				59574B641DFFE565005B6AD4 /* SVGParser.cpp in Sources */,
 				59EC75571E004ADB00EB37C2 /* UnitTestBase.cpp in Sources */,
+				5922E88D1E0077FF00E988A1 /* RunLoopSource.cpp in Sources */,
 				59574B651DFFE565005B6AD4 /* GXPath.cpp in Sources */,
 				59574B661DFFE565005B6AD4 /* JSMachineDelegate.cpp in Sources */,
 				59574B671DFFE565005B6AD4 /* GXElement.cpp in Sources */,
@@ -1157,6 +1191,7 @@
 				59574B701DFFE565005B6AD4 /* TinyJS_MathFunctions.cpp in Sources */,
 				59574B711DFFE565005B6AD4 /* DisplayController.cpp in Sources */,
 				59574B721DFFE565005B6AD4 /* Url.cpp in Sources */,
+				5922E8871E0076F200E988A1 /* Timer.cpp in Sources */,
 				59574B731DFFE565005B6AD4 /* GXColors.cpp in Sources */,
 				59574B741DFFE565005B6AD4 /* Dispatch.cpp in Sources */,
 				59574B751DFFE565005B6AD4 /* Timecode.cpp in Sources */,
@@ -1166,6 +1201,7 @@
 				59574B791DFFE565005B6AD4 /* cJSON.c in Sources */,
 				59574B7A1DFFE565005B6AD4 /* AudioController.cpp in Sources */,
 				59574B7B1DFFE565005B6AD4 /* AUElement.cpp in Sources */,
+				5922E87E1E0075B800E988A1 /* RunLoop.cpp in Sources */,
 				59574B7C1DFFE565005B6AD4 /* AudioGraph.cpp in Sources */,
 				59574B7D1DFFE565005B6AD4 /* GXTransformations.cpp in Sources */,
 				59574B7E1DFFE565005B6AD4 /* UIVideo.cpp in Sources */,
