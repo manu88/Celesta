@@ -163,6 +163,8 @@
 		59EC75501E004A8700EB37C2 /* VariantUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */; };
 		59EC75571E004ADB00EB37C2 /* UnitTestBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */; };
 		59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */; };
+		59EC755E1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
+		59EC755F1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -398,6 +400,8 @@
 		59EC75561E004ADB00EB37C2 /* UnitTestBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UnitTestBase.hpp; path = Tests/UnitTestBase.hpp; sourceTree = "<group>"; };
 		59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PListUnitTest.cpp; path = Tests/PListUnitTest.cpp; sourceTree = "<group>"; };
 		59EC755A1E004DD700EB37C2 /* PListUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PListUnitTest.hpp; path = Tests/PListUnitTest.hpp; sourceTree = "<group>"; };
+		59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dictionnary.cpp; sourceTree = "<group>"; };
+		59EC755D1E005BBC00EB37C2 /* Dictionnary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dictionnary.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,6 +535,8 @@
 			children = (
 				595749C21DFEFAD5005B6AD4 /* Database.cpp */,
 				595749C31DFEFAD5005B6AD4 /* Database.h */,
+				59EC755D1E005BBC00EB37C2 /* Dictionnary.hpp */,
+				59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */,
 				595749C41DFEFAD5005B6AD4 /* Date.cpp */,
 				595749C51DFEFAD5005B6AD4 /* Date.h */,
 				595749C61DFEFAD5005B6AD4 /* StringOperations.cpp */,
@@ -1081,6 +1087,7 @@
 				59574AE71DFEFAD5005B6AD4 /* Painter.cpp in Sources */,
 				59574AD31DFEFAD5005B6AD4 /* ApplicationBase.cpp in Sources */,
 				59574B261DFEFAD5005B6AD4 /* MainPlayer.cpp in Sources */,
+				59EC755E1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */,
 				59574AD41DFEFAD5005B6AD4 /* FileManager.cpp in Sources */,
 				59574ADB1DFEFAD5005B6AD4 /* Variant.cpp in Sources */,
 				59574B2F1DFEFAD5005B6AD4 /* UILabel.cpp in Sources */,
@@ -1127,6 +1134,7 @@
 				59574B661DFFE565005B6AD4 /* JSMachineDelegate.cpp in Sources */,
 				59574B671DFFE565005B6AD4 /* GXElement.cpp in Sources */,
 				59574B681DFFE565005B6AD4 /* GXTouch.cpp in Sources */,
+				59EC755F1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */,
 				59574B691DFFE565005B6AD4 /* FontParser.cpp in Sources */,
 				59574B6A1DFFE565005B6AD4 /* Element.cpp in Sources */,
 				59574B6B1DFFE565005B6AD4 /* mongoose.c in Sources */,
