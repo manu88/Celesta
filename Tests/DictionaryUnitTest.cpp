@@ -16,8 +16,29 @@ DictionaryUnitTest::DictionaryUnitTest(): UnitTestBase("Dictionary")
 
 bool DictionaryUnitTest::test()
 {
+    Dictionary dictCpy;
     
-    Dictionary dict;
+    {
+        Dictionary dict;
+        
+        assert( dict.contains("Hello") == false);
+        
+        assert(dict.addValueForKey(Variant("Hello test value"), "key1") );
+        assert( dict.contains("key1") );
+        
+        const Variant v1 = dict.getValueForKey("key1");
+        
+        assert(v1.isNull() == false);
+        
+        printf("v1 value '%s' \n" , v1.getString().c_str() );
+        
+        dictCpy = dict;
+    }
     
+    const Variant v1 = dictCpy.getValueForKey("key1");
+    
+    assert(v1.isNull() == false);
+    
+    printf("v1 value '%s' \n" , v1.getString().c_str() );
     return true;
 }

@@ -166,6 +166,8 @@
 		59EC755E1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
 		59EC755F1E005BBC00EB37C2 /* Dictionnary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC755C1E005BBC00EB37C2 /* Dictionnary.cpp */; };
 		59EC75631E0060B000EB37C2 /* DictionaryUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */; };
+		59EC75661E006DD900EB37C2 /* GBObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75651E006DD900EB37C2 /* GBObjectWrapper.cpp */; };
+		59EC75671E006DD900EB37C2 /* GBObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75651E006DD900EB37C2 /* GBObjectWrapper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,7 +248,6 @@
 		595749C51DFEFAD5005B6AD4 /* Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
 		595749C61DFEFAD5005B6AD4 /* StringOperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringOperations.cpp; sourceTree = "<group>"; };
 		595749C71DFEFAD5005B6AD4 /* StringOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringOperations.h; sourceTree = "<group>"; };
-		595749C81DFEFAD5005B6AD4 /* ValueImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueImpl.h; sourceTree = "<group>"; };
 		595749C91DFEFAD5005B6AD4 /* Variant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Variant.cpp; sourceTree = "<group>"; };
 		595749CA1DFEFAD5005B6AD4 /* Variant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Variant.h; sourceTree = "<group>"; };
 		595749CB1DFEFAD5005B6AD4 /* Env_Variables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Env_Variables.h; sourceTree = "<group>"; };
@@ -406,6 +407,8 @@
 		59EC75601E005EB100EB37C2 /* SequenceType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SequenceType.hpp; sourceTree = "<group>"; };
 		59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DictionaryUnitTest.cpp; path = Tests/DictionaryUnitTest.cpp; sourceTree = "<group>"; };
 		59EC75621E0060B000EB37C2 /* DictionaryUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DictionaryUnitTest.hpp; path = Tests/DictionaryUnitTest.hpp; sourceTree = "<group>"; };
+		59EC75641E006CC700EB37C2 /* GBObjectWrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GBObjectWrapper.hpp; sourceTree = "<group>"; };
+		59EC75651E006DD900EB37C2 /* GBObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GBObjectWrapper.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,7 +549,6 @@
 				595749C51DFEFAD5005B6AD4 /* Date.h */,
 				595749C61DFEFAD5005B6AD4 /* StringOperations.cpp */,
 				595749C71DFEFAD5005B6AD4 /* StringOperations.h */,
-				595749C81DFEFAD5005B6AD4 /* ValueImpl.h */,
 				595749C91DFEFAD5005B6AD4 /* Variant.cpp */,
 				595749CA1DFEFAD5005B6AD4 /* Variant.h */,
 			);
@@ -675,6 +677,8 @@
 				59574A751DFEFAD5005B6AD4 /* Memory.h */,
 				59574A761DFEFAD5005B6AD4 /* Object.cpp */,
 				59574A771DFEFAD5005B6AD4 /* Object.h */,
+				59EC75651E006DD900EB37C2 /* GBObjectWrapper.cpp */,
+				59EC75641E006CC700EB37C2 /* GBObjectWrapper.hpp */,
 				59574A781DFEFAD5005B6AD4 /* SerializableObject.h */,
 				59574A791DFEFAD5005B6AD4 /* Thread.cpp */,
 				59574A7A1DFEFAD5005B6AD4 /* Thread.h */,
@@ -1080,6 +1084,7 @@
 				59574AD61DFEFAD5005B6AD4 /* AudioGraph.cpp in Sources */,
 				59574AE51DFEFAD5005B6AD4 /* GXTransformations.cpp in Sources */,
 				59574B321DFEFAD5005B6AD4 /* UIVideo.cpp in Sources */,
+				59EC75661E006DD900EB37C2 /* GBObjectWrapper.cpp in Sources */,
 				59574B121DFEFAD5005B6AD4 /* SerialInterface.cpp in Sources */,
 				59574B2E1DFEFAD5005B6AD4 /* UIImage.cpp in Sources */,
 				59574B1A1DFEFAD5005B6AD4 /* Utils.cpp in Sources */,
@@ -1170,6 +1175,7 @@
 				59574B821DFFE565005B6AD4 /* UINotification.cpp in Sources */,
 				59574B831DFFE565005B6AD4 /* Peripherals.cpp in Sources */,
 				59574B841DFFE565005B6AD4 /* AbstractDelegate.cpp in Sources */,
+				59EC75671E006DD900EB37C2 /* GBObjectWrapper.cpp in Sources */,
 				59574B851DFFE565005B6AD4 /* AbstractController.cpp in Sources */,
 				59574B861DFFE565005B6AD4 /* TinyJS.cpp in Sources */,
 				59574B871DFFE565005B6AD4 /* TinyJS_Functions.cpp in Sources */,

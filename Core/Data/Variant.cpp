@@ -20,7 +20,7 @@
 #include "../Config.h"
 #include "../Log/Log.h"
 #include "Variant.h"
-#include "ValueImpl.h"
+
 
 
 #ifdef USE_JAVA_INTERPRETER

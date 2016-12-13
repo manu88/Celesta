@@ -65,8 +65,7 @@ int Object::s_count = 0;
 //ObjectWatcher Object::s_watcher;
 
 
-Object::Object() noexcept :
-_gbPtr(nullptr)
+Object::Object() noexcept 
 {
     num_obj = s_count++;
     
