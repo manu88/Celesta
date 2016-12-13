@@ -419,11 +419,15 @@ private:
         RootNode->setElementName( ClassNames::Root );
         RootNode->className = ClassNames::Root;
         RootNode->setParentElement( nullptr );
+        
+        assert(RootNode->_id == 0);
     }
     
     static void releaseRootNode()
     {
-        assert( RootNode != nullptr );
+        if( RootNode == nullptr)
+            return;
+            
         assert( RootNode->getChildren().size() == 0 );
         
         delete RootNode;

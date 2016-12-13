@@ -45,10 +45,13 @@ _typeInfos     ( None )
 {
     s_elementsCount++;
     
-    if( s_elementsCount == 1 )
+    if( s_elementsCount == 0 )
     {
+        //printf("INIT ROOT \n");
         initRootNode();
+        
     }
+    
     
     setParentElement( RootNode );
 #ifdef ENABLE_ELEMENT_SELECTOR
@@ -77,8 +80,10 @@ _typeInfos     ( None )
     _elementName = "element"+ std::to_string(_id);
     
 #endif
-    
+    //printf("Add element id = %llu class %s\n " , _id , className.c_str());
 
+    
+    
 }
 
 Element::~Element()
@@ -90,11 +95,16 @@ Element::~Element()
     addId();
     s_elementsCount--;
     
-    if ( s_elementsCount == 0 )
-        s_elementNextId = 0;
-
-    else if (s_elementsCount == 1)
+    if (s_elementsCount == 1)
+    {
+        //printf("RELEASE ROOT\n");
         releaseRootNode();
+    }
+    
+    if ( s_elementsCount == 0 )
+        s_elementNextId = -1;
+
+    
 
 }
 

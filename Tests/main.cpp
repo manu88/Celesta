@@ -18,16 +18,18 @@
 
 int main(int argc, const char * argv[])
 {
-
+    Log::addLocalLogger();
     
     printf("Starting Celesta unit Tests\n");
     
     {
+
         VariantUnitTest t0;
         t0.run();
         
         PListUnitTest t1;
         t1.run();
+        
         
         DictionaryUnitTest t2;
         t2.run();

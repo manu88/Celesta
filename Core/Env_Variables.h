@@ -65,6 +65,7 @@ namespace ClassNames
     static const std::string Dictionary          = "Dictionary";
     static const std::string Root                = "Root";
 
+    static const std::string RunLoop             = "RunLoop";
     static const std::string Dispatch            = "Dispatch";
     static const std::string Timer               = "Timer";
     static const std::string Chrono              = "Chrono";
