@@ -116,6 +116,8 @@ public:
     
     DataPair getPair() const;
     
+    
+    // don't use it unless you know what you're doing!
     GBRef getGBRef() const
     {
         return _value;

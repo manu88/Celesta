@@ -448,7 +448,7 @@ bool Variant::isList() const noexcept
 bool Variant::isNull() const noexcept
 {
     if (_value == nullptr )
-        return false;
+        return true;
     
     return  !GBObjectIsValid(_value);
 }

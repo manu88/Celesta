@@ -39,5 +39,19 @@ bool VariantUnitTest::test()
     assert( floatVal.isFloat() );
     printf("floatVal value '%f'\n" , intVal.getFloat() );
     
+    
+    const char* testStr = "My remanent value...";
+    
+    Variant testAssignment;
+    
+    {
+        Variant value(testStr);
+        testAssignment = value;
+        
+        assert(strcmp(testStr, value.getString().c_str()) == 0);
+    }
+    assert(strcmp(testStr, testAssignment.getString().c_str())== 0);
+    
+    
     return true;
 }
