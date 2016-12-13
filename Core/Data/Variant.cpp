@@ -19,10 +19,6 @@
 #include <oscpack/osc/OscReceivedElements.h>
 #endif
 
-
-
-
-
 ///*static*/ Variant Variant::_null = Variant();
 /*static*/ Variant& Variant::null() noexcept
 {
@@ -33,79 +29,93 @@
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 Variant::Variant():
-_variant ( new Value< void* >(  nullptr  ,ValueImpl::T_NULL ) )
+//_variant ( new Value< void* >(  nullptr  ,ValueImpl::T_NULL ) ),
+_value(NULL)
 {}
 
 Variant::Variant( int val):
-_variant ( new Value< int >( val ,ValueImpl::T_INT ) )
+//_variant ( new Value< int >( val ,ValueImpl::T_INT ) ),
+_value( GBNumberInitWithInt(val))
 {}
 
 Variant::Variant( unsigned int val ):
-_variant ( new Value<int >( static_cast<int>( val ) ,ValueImpl::T_INT ) )
+//_variant ( new Value<int >( static_cast<int>( val ) ,ValueImpl::T_INT ) ),
+_value( GBNumberInitWithInt(static_cast<int>( val )))
 {}
 
 Variant::Variant( int64_t val):
-_variant ( new Value< int64_t >( val ,ValueImpl::T_64 ) )
+//_variant ( new Value< int64_t >( val ,ValueImpl::T_64 ) ),
+_value( GBNumberInitWithLong(static_cast<long>( val )))
 {}
 
 Variant::Variant( uint64_t val):
-_variant ( new Value<  uint64_t >( val ,ValueImpl::T_U64 ) )
+//_variant ( new Value<  uint64_t >( val ,ValueImpl::T_U64 ) ),
+_value( GBNumberInitWithLong(static_cast<long>( val )))
 {}
 
 Variant::Variant( float val ):
-_variant ( new Value< float >( val , ValueImpl::T_FLOAT ) )
+//_variant ( new Value< float >( val , ValueImpl::T_FLOAT ) ),
+_value( GBNumberInitWithFloat(val))
 {}
 
 Variant::Variant( double val ):
-_variant ( new Value< double >( val ,ValueImpl::T_DOUBLE ) )
+//_variant ( new Value< double >( val ,ValueImpl::T_DOUBLE ) ),
+_value( GBNumberInitWithDouble(val))
 {}
 
 Variant::Variant( long val ):
-_variant ( new Value< long >( val ,ValueImpl::T_LONG ) )
+//_variant ( new Value< long >( val ,ValueImpl::T_LONG ) ),
+_value( GBNumberInitWithLong( val  ))
 {}
 
 Variant::Variant( unsigned long val ):
-_variant ( new Value< unsigned long >( val ,ValueImpl::T_ULONG ) )
+//_variant ( new Value< unsigned long >( val ,ValueImpl::T_ULONG ) ),
+_value( GBNumberInitWithLong(static_cast<long>( val )))
 {}
 
 Variant::Variant(bool val):
-_variant ( new Value< bool >( val ,ValueImpl::T_BOOL ) )
+//_variant ( new Value< bool >( val ,ValueImpl::T_BOOL ) ),
+_value( GBNumberInitWithInt( val  ))
 {}
 
-Variant::Variant( std::initializer_list< Variant > args) :
-_variant ( new Value< VariantList >( args ,ValueImpl::T_LIST ) )
-{
-    /*
-    for (const Variant &val : args )
-    {
-        
-    }
-    */
-}
+/* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
-Variant::Variant( const VariantList &args ):
-_variant ( new Value< VariantList >( args ,ValueImpl::T_LIST ) )
+Variant::Variant( std::initializer_list< Variant > args)
+//_variant ( new Value< VariantList >( args ,ValueImpl::T_LIST ) )
 {
     
 }
 
-Variant::Variant( const std::vector<std::string> &args):
-_variant ( new Value< VariantList >( {} ,ValueImpl::T_LIST ) )
+Variant::Variant( const VariantList &args )
+//_variant ( new Value< VariantList >( args ,ValueImpl::T_LIST ) )
 {
+    
+}
+
+Variant::Variant( const std::vector<std::string> &args)
+//_variant ( new Value< VariantList >( {} ,ValueImpl::T_LIST ) )
+{
+    /*
     _variant->getList().clear();
     
     for (const auto &s : args)
         _variant->getList().push_back( Variant(s) );
+     */
 }
 
-Variant::Variant( const BytesList &args):
-_variant ( new Value< VariantList >( {} ,ValueImpl::T_BYTES ) )
+Variant::Variant( const BytesList &args)
+//_variant ( new Value< VariantList >( {} ,ValueImpl::T_BYTES ) )
 {
+    /*
     _variant->getList().clear();
     
     for (const auto &s : args)
         _variant->getList().push_back( Variant( (int)s) );
+     */
 }
+
+
+/* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
@@ -125,6 +135,14 @@ Variant::Variant( const GXPoint & point):
 Variant::Variant( const GXSize & size):
 ::Variant({ Variant(  size.width), Variant( size.height) })
 {}
+
+/* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
+
+Variant::Variant( GBRef gbObject):
+_value( const_cast<GBObject*>( gbObject))
+{
+    GBRetain(gbObject);
+}
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
@@ -213,19 +231,21 @@ Variant::Variant( const GXSize & size):
 
 
 Variant::Variant(const std::string &val):
-_variant ( new Value< std::string >( val , ValueImpl::T_STRING ) )
+//_variant ( new Value< std::string >( val , ValueImpl::T_STRING ) )
+_value(GBStringInitWithCStr( val.c_str()))
 {
     
 }
 
 Variant::Variant( const char* val ) :
-_variant( new Value<std::string> ( std::string( val ) , ValueImpl::T_STRING  ) )
+//_variant( new Value<std::string> ( std::string( val ) , ValueImpl::T_STRING  ) ),
+_value(GBStringInitWithCStr( val ) )
 {
 
 }
 
-Variant::Variant( const std::string &name , const Variant &val):
-_variant( new Value<DataPair> ( std::make_pair(name, val) , ValueImpl::T_PAIR  ) )
+Variant::Variant( const std::string &name , const Variant &val)
+//_variant( new Value<DataPair> ( std::make_pair(name, val) , ValueImpl::T_PAIR  ) )
 {
     
 }
@@ -233,107 +253,79 @@ _variant( new Value<DataPair> ( std::make_pair(name, val) , ValueImpl::T_PAIR  )
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 Variant::Variant ( const Variant &val ):
-_variant ( val._variant)
-{    
-    _variant->retain();
+_value( val._value)
+{
+    GBRetain(_value);
 }
 
 Variant& Variant::operator=(Variant const& copy)
 {
-    _variant->release();
-
-    if (_variant->refCount() <=0 )
-    {
-        delete _variant;
-        _variant = nullptr;
-    }
-
-    _variant = copy._variant;
+    GBRelease( _value );
+    _value = copy._value;
     
-    _variant->retain();
+    GBRetain(_value);
     
     return *this;
 }
 
-/*
-const Variant& Variant::operator=(Variant const& copy) const
-{
-    printf("\n REF = %i" , _variant->release() );
-    
-    if (_variant->getType() != copy._variant->getType() )
-    {
-        printf("\n assign type differ! %i" , _variant->getId() );
-
-    }
-    
-    _variant = copy._variant;
-    
-    _variant->retain();
-    
-    return *this;
-}
-*/
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
-
 
 Variant::~Variant()
 {
-    if ( _variant && _variant->release() ==0 )
-    {
-        delete _variant;
-    }
+    GBRelease(_value);
 }
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 int Variant::getInt() const
 {
-    return _variant->getInt();
+    return GBNumberToInt( static_cast<const GBNumber*>( _value ));
 }
 
 int64_t Variant::getInt64() const
 {
-    return _variant->getInt64();
+    return static_cast<int64_t>( GBNumberToLong( static_cast<const GBNumber*>( _value )));
 }
 
 uint64_t Variant::getUInt64() const
 {
-    return _variant->getUInt64();
+    return static_cast<uint64_t>( GBNumberToLong( static_cast<const GBNumber*>( _value )));
 }
 
 float Variant::getFloat() const
 {
-    return _variant->getFloat();
+    return GBNumberToFloat( static_cast<const GBNumber*>( _value ));
 }
 
 double Variant::getDouble() const
 {
-    return _variant->getDouble();
+    return GBNumberToDouble( static_cast<const GBNumber*>( _value ));
 }
 
 long Variant::getLong() const
 {
-    return _variant->getLong();
+    return GBNumberToLong( static_cast<const GBNumber*>( _value ));
 }
 
 unsigned long Variant::getULong() const
 {
-    return _variant->getULong();
+    return static_cast<unsigned long>( GBNumberToLong( static_cast<const GBNumber*>( _value )) );
 }
 
 bool Variant::getBool() const
 {
-    return _variant->getBool();
+    return static_cast<bool>(getInt());
 }
 const std::string Variant::getString() const
 {
-    return _variant->getString();
+    return std::string( GBStringGetCStr( static_cast<const GBString*>( _value ) ) );
 }
 
 /* **** **** **** **** **** */
 
 const VariantList Variant::getList() const
 {
+    /*
     if ( isList() )
         return _variant->getList();
     else if (isByteArray() )
@@ -345,16 +337,17 @@ const VariantList Variant::getList() const
 
         return l;
     }
-    
+    */
     return { *this };
 }
 
 VariantList Variant::getList()
 {
+    /*
     if ( isList() )
         return _variant->getList();
 
-    
+    */
     return { *this };
 }
 
@@ -362,17 +355,19 @@ VariantList Variant::getList()
 
 const std::vector< uint8_t > Variant::getByteArray() const
 {
-    return _variant->getByteArray();
+    DEBUG_ASSERT(0);
+    return std::vector<uint8_t>();
 }
 
 
-const DataPair& Variant::getPair() const
+DataPair Variant::getPair() const
 {
-    return _variant->getPair();
+    DEBUG_ASSERT(0);
+    return std::make_pair<std::string , Variant>("lol" , Variant("lol"));
 }
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
-
+/*
 template <typename T>
 T Variant::getValue() const
 {
@@ -396,76 +391,76 @@ template <typename T>  bool Variant::isType() const
 
 template unsigned long Variant::getValue< unsigned long >() const;
 template bool Variant::isType<unsigned long> () const;
-
+*/
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 bool Variant::isInt() const noexcept
 {
-    return _variant->isInt();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeInt;
 }
 
 bool Variant::isInt64() const noexcept
 {
-    return _variant->isInt64();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeLong;
 }
 
 bool Variant::isUInt64() const noexcept
 {
-    return _variant->isUInt64();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeLong;
 }
 
 bool Variant::isFloat() const noexcept
 {
-    return _variant->isFloat();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeFloat;
 }
 
 bool Variant::isLong() const noexcept
 {
-    return _variant->isLong();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeLong;
 }
 
 bool Variant::isULong() const noexcept
 {
-    return _variant->isULong();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeLong;
 }
 
 bool Variant::isDouble() const noexcept
 {
-    return _variant->isDouble();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeDouble;
 }
 
 bool Variant::isBool() const noexcept
 {
-    return _variant->isBool();
+    return GBNumberGetType( static_cast<const GBNumber*>( _value)) == GBNumberTypeInt;
 }
 
 bool Variant::isString() const noexcept
 {
-    return _variant->isString();
+    return IsKindOfClass(_value, GBStringClass);
 }
 
 bool Variant::isList() const noexcept
 {
-    return _variant->isList();
+    return false;
 }
 
 bool Variant::isNull() const noexcept
 {
-    if (_variant == nullptr )
+    if (_value == nullptr )
         return false;
     
-    return  _variant->isNull();
+    return  !GBObjectIsValid(_value);
 }
 
 bool Variant::isByteArray() const noexcept
 {
-    return _variant->isByteArray();
+    return false;
 }
 
 bool Variant::isDataPair() const noexcept
 {
-    return _variant->isDataPair();
+    return false;
 }
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
@@ -479,12 +474,13 @@ bool Variant::operator==( const Variant& rhs) const
 
 bool Variant::operator!=( const Variant& rhs) const
 {
-    return _variant != rhs._variant;
+    return GBObjectEquals(_value, rhs._value) == 0;
 }
 
 bool Variant::operator==( const void* ptr) const
 {
-    return getValue<void*>() == ptr;
+    DEBUG_ASSERT(0);// ???
+    return false;
 }
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */

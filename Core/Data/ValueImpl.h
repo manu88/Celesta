@@ -47,17 +47,21 @@ public:
     
     int retain()
     {
-        return ++_refCount;
+        return GBRetain(_gbPtr);
+        //return ++_refCount;
     }
     
     int release()
     {
-        return --_refCount;
+        GBRelease(_gbPtr);
+        return GBObjectGetRefCount(_gbPtr);
+        //return --_refCount;
     }
     
     int refCount() const
     {
-        return _refCount;
+        return GBObjectGetRefCount(_gbPtr);
+        //return _refCount;
     }
 
     virtual ~ValueImpl()
@@ -155,8 +159,6 @@ public:
     
     /* **** **** **** **** **** **** **** **** **** **** **** */
     
-
-
 protected:
 
     int _type;
@@ -186,7 +188,7 @@ public:
     ValueImpl(type),
     _data( value )
     {
-    //    className = "Value";
+        
     }
     
     Value(const Value &other) = delete;

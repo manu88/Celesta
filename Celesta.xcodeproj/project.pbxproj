@@ -66,7 +66,6 @@
 		59574B241DFEFAD5005B6AD4 /* JSONParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A951DFEFAD5005B6AD4 /* JSONParser.cpp */; };
 		59574B251DFEFAD5005B6AD4 /* SVGParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A9A1DFEFAD5005B6AD4 /* SVGParser.cpp */; };
 		59574B261DFEFAD5005B6AD4 /* MainPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AA41DFEFAD5005B6AD4 /* MainPlayer.cpp */; };
-		59574B271DFEFAD5005B6AD4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 59574AAB1DFEFAD5005B6AD4 /* README.md */; };
 		59574B281DFEFAD5005B6AD4 /* Dispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AAE1DFEFAD5005B6AD4 /* Dispatch.cpp */; };
 		59574B291DFEFAD5005B6AD4 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB01DFEFAD5005B6AD4 /* Event.cpp */; };
 		59574B2A1DFEFAD5005B6AD4 /* IPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB21DFEFAD5005B6AD4 /* IPC.cpp */; };
@@ -84,6 +83,86 @@
 		59574B361DFEFAD5005B6AD4 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 59574ACF1DFEFAD5005B6AD4 /* mongoose.c */; };
 		59574B371DFEFAD5005B6AD4 /* WebServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AD11DFEFAD5005B6AD4 /* WebServer.cpp */; };
 		59574B471DFFE16C005B6AD4 /* libGroundBase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59574B401DFFE15B005B6AD4 /* libGroundBase.dylib */; };
+		59574B4B1DFFE565005B6AD4 /* UIView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AC71DFEFAD5005B6AD4 /* UIView.cpp */; };
+		59574B4C1DFFE565005B6AD4 /* GXAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749CF1DFEFAD5005B6AD4 /* GXAnimation.cpp */; };
+		59574B4D1DFFE565005B6AD4 /* GXImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749D81DFEFAD5005B6AD4 /* GXImage.cpp */; };
+		59574B4E1DFFE565005B6AD4 /* GXTextRenderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749DF1DFEFAD5005B6AD4 /* GXTextRenderer.cpp */; };
+		59574B4F1DFFE565005B6AD4 /* IPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB21DFEFAD5005B6AD4 /* IPC.cpp */; };
+		59574B501DFFE565005B6AD4 /* GpioInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A5C1DFEFAD5005B6AD4 /* GpioInterface.cpp */; };
+		59574B511DFFE565005B6AD4 /* Memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A741DFEFAD5005B6AD4 /* Memory.cpp */; };
+		59574B521DFFE565005B6AD4 /* GpioPlateformImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A611DFEFAD5005B6AD4 /* GpioPlateformImpl.cpp */; };
+		59574B531DFFE565005B6AD4 /* JSONParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A951DFEFAD5005B6AD4 /* JSONParser.cpp */; };
+		59574B541DFFE565005B6AD4 /* GXFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749D61DFEFAD5005B6AD4 /* GXFont.cpp */; };
+		59574B551DFFE565005B6AD4 /* CanEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A5A1DFEFAD5005B6AD4 /* CanEvent.cpp */; };
+		59574B561DFFE565005B6AD4 /* GraphicsComponents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749F01DFEFAD5005B6AD4 /* GraphicsComponents.cpp */; };
+		59574B571DFFE565005B6AD4 /* DisplayImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749E41DFEFAD5005B6AD4 /* DisplayImpl.cpp */; };
+		59574B581DFFE565005B6AD4 /* InterfaceEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A661DFEFAD5005B6AD4 /* InterfaceEvent.cpp */; };
+		59574B591DFFE565005B6AD4 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB01DFEFAD5005B6AD4 /* Event.cpp */; };
+		59574B5A1DFFE565005B6AD4 /* UI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB81DFEFAD5005B6AD4 /* UI.cpp */; };
+		59574B5B1DFFE565005B6AD4 /* NetworkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A8D1DFEFAD5005B6AD4 /* NetworkController.cpp */; };
+		59574B5C1DFFE565005B6AD4 /* StringOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749C61DFEFAD5005B6AD4 /* StringOperations.cpp */; };
+		59574B5D1DFFE565005B6AD4 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749C41DFEFAD5005B6AD4 /* Date.cpp */; };
+		59574B5E1DFFE565005B6AD4 /* CanPlateformImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A5F1DFEFAD5005B6AD4 /* CanPlateformImpl.cpp */; };
+		59574B5F1DFFE565005B6AD4 /* GXAsyncPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749D11DFEFAD5005B6AD4 /* GXAsyncPainter.cpp */; };
+		59574B601DFFE565005B6AD4 /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A8A1DFEFAD5005B6AD4 /* Log.cpp */; };
+		59574B611DFFE565005B6AD4 /* JSMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A7E1DFEFAD5005B6AD4 /* JSMachine.cpp */; };
+		59574B621DFFE565005B6AD4 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A761DFEFAD5005B6AD4 /* Object.cpp */; };
+		59574B641DFFE565005B6AD4 /* SVGParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A9A1DFEFAD5005B6AD4 /* SVGParser.cpp */; };
+		59574B651DFFE565005B6AD4 /* GXPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749DB1DFEFAD5005B6AD4 /* GXPath.cpp */; };
+		59574B661DFFE565005B6AD4 /* JSMachineDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A801DFEFAD5005B6AD4 /* JSMachineDelegate.cpp */; };
+		59574B671DFFE565005B6AD4 /* GXElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749D41DFEFAD5005B6AD4 /* GXElement.cpp */; };
+		59574B681DFFE565005B6AD4 /* GXTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A551DFEFAD5005B6AD4 /* GXTouch.cpp */; };
+		59574B691DFFE565005B6AD4 /* FontParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A931DFEFAD5005B6AD4 /* FontParser.cpp */; };
+		59574B6A1DFFE565005B6AD4 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A701DFEFAD5005B6AD4 /* Element.cpp */; };
+		59574B6B1DFFE565005B6AD4 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 59574ACF1DFEFAD5005B6AD4 /* mongoose.c */; };
+		59574B6D1DFFE565005B6AD4 /* Thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A791DFEFAD5005B6AD4 /* Thread.cpp */; };
+		59574B6E1DFFE565005B6AD4 /* GXScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749DD1DFEFAD5005B6AD4 /* GXScene.cpp */; };
+		59574B701DFFE565005B6AD4 /* TinyJS_MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A871DFEFAD5005B6AD4 /* TinyJS_MathFunctions.cpp */; };
+		59574B711DFFE565005B6AD4 /* DisplayController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749CD1DFEFAD5005B6AD4 /* DisplayController.cpp */; };
+		59574B721DFFE565005B6AD4 /* Url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574ACC1DFEFAD5005B6AD4 /* Url.cpp */; };
+		59574B731DFFE565005B6AD4 /* GXColors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749EA1DFEFAD5005B6AD4 /* GXColors.cpp */; };
+		59574B741DFFE565005B6AD4 /* Dispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AAE1DFEFAD5005B6AD4 /* Dispatch.cpp */; };
+		59574B751DFFE565005B6AD4 /* Timecode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AB51DFEFAD5005B6AD4 /* Timecode.cpp */; };
+		59574B761DFFE565005B6AD4 /* UISlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AC31DFEFAD5005B6AD4 /* UISlider.cpp */; };
+		59574B771DFFE565005B6AD4 /* Database.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749C21DFEFAD5005B6AD4 /* Database.cpp */; };
+		59574B781DFFE565005B6AD4 /* WebServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AD11DFEFAD5005B6AD4 /* WebServer.cpp */; };
+		59574B791DFFE565005B6AD4 /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 59574A911DFEFAD5005B6AD4 /* cJSON.c */; };
+		59574B7A1DFFE565005B6AD4 /* AudioController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749B71DFEFAD5005B6AD4 /* AudioController.cpp */; };
+		59574B7B1DFFE565005B6AD4 /* AUElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749BB1DFEFAD5005B6AD4 /* AUElement.cpp */; };
+		59574B7C1DFFE565005B6AD4 /* AudioGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749B91DFEFAD5005B6AD4 /* AudioGraph.cpp */; };
+		59574B7D1DFFE565005B6AD4 /* GXTransformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749E11DFEFAD5005B6AD4 /* GXTransformations.cpp */; };
+		59574B7E1DFFE565005B6AD4 /* UIVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AC51DFEFAD5005B6AD4 /* UIVideo.cpp */; };
+		59574B7F1DFFE565005B6AD4 /* SerialInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A681DFEFAD5005B6AD4 /* SerialInterface.cpp */; };
+		59574B801DFFE565005B6AD4 /* UIImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574ABC1DFEFAD5005B6AD4 /* UIImage.cpp */; };
+		59574B811DFFE565005B6AD4 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A7B1DFEFAD5005B6AD4 /* Utils.cpp */; };
+		59574B821DFFE565005B6AD4 /* UINotification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AC11DFEFAD5005B6AD4 /* UINotification.cpp */; };
+		59574B831DFFE565005B6AD4 /* Peripherals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A571DFEFAD5005B6AD4 /* Peripherals.cpp */; };
+		59574B841DFFE565005B6AD4 /* AbstractDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A6D1DFEFAD5005B6AD4 /* AbstractDelegate.cpp */; };
+		59574B851DFFE565005B6AD4 /* AbstractController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A6B1DFEFAD5005B6AD4 /* AbstractController.cpp */; };
+		59574B861DFFE565005B6AD4 /* TinyJS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A831DFEFAD5005B6AD4 /* TinyJS.cpp */; };
+		59574B871DFFE565005B6AD4 /* TinyJS_Functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A851DFEFAD5005B6AD4 /* TinyJS_Functions.cpp */; };
+		59574B881DFFE565005B6AD4 /* GXVideo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749F21DFEFAD5005B6AD4 /* GXVideo.cpp */; };
+		59574B891DFFE565005B6AD4 /* UIButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574ABA1DFEFAD5005B6AD4 /* UIButton.cpp */; };
+		59574B8A1DFFE565005B6AD4 /* Painter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749E61DFEFAD5005B6AD4 /* Painter.cpp */; };
+		59574B8B1DFFE565005B6AD4 /* ApplicationBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749B21DFEFAD5005B6AD4 /* ApplicationBase.cpp */; };
+		59574B8C1DFFE565005B6AD4 /* MainPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AA41DFEFAD5005B6AD4 /* MainPlayer.cpp */; };
+		59574B8D1DFFE565005B6AD4 /* FileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749B41DFEFAD5005B6AD4 /* FileManager.cpp */; };
+		59574B8E1DFFE565005B6AD4 /* Variant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749C91DFEFAD5005B6AD4 /* Variant.cpp */; };
+		59574B8F1DFFE565005B6AD4 /* UILabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574ABF1DFEFAD5005B6AD4 /* UILabel.cpp */; };
+		59574B901DFFE565005B6AD4 /* FileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A721DFEFAD5005B6AD4 /* FileSystem.cpp */; };
+		59574B911DFFE565005B6AD4 /* InterfaceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574A641DFEFAD5005B6AD4 /* InterfaceController.cpp */; };
+		59574B921DFFE565005B6AD4 /* UIViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AC91DFEFAD5005B6AD4 /* UIViewController.cpp */; };
+		59574B931DFFE565005B6AD4 /* GXGeometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 595749EC1DFEFAD5005B6AD4 /* GXGeometry.cpp */; };
+		59574B951DFFE565005B6AD4 /* libGroundBase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59574B401DFFE15B005B6AD4 /* libGroundBase.dylib */; };
+		59574B961DFFE565005B6AD4 /* libcurl.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 595749A71DFEF72F005B6AD4 /* libcurl.4.dylib */; };
+		59574B971DFFE565005B6AD4 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 595749A81DFEF72F005B6AD4 /* libfreetype.a */; };
+		59574B981DFFE565005B6AD4 /* liboscpack.so.1.1.0 in Frameworks */ = {isa = PBXBuildFile; fileRef = 595749A91DFEF72F005B6AD4 /* liboscpack.so.1.1.0 */; };
+		59574BA31DFFE59F005B6AD4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA21DFFE59F005B6AD4 /* main.cpp */; };
+		59574BA81DFFE89D005B6AD4 /* PropertyList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */; };
+		59574BA91DFFE89D005B6AD4 /* PropertyList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */; };
+		59EC75501E004A8700EB37C2 /* VariantUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */; };
+		59EC75571E004ADB00EB37C2 /* UnitTestBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */; };
+		59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +198,15 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		595748061DFEF554005B6AD4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		59574B991DFFE565005B6AD4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -264,7 +352,6 @@
 		59574AA71DFEFAD5005B6AD4 /* MacOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacOS.h; sourceTree = "<group>"; };
 		59574AA81DFEFAD5005B6AD4 /* Plateform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plateform.h; sourceTree = "<group>"; };
 		59574AAA1DFEFAD5005B6AD4 /* RaspberryPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaspberryPI.h; sourceTree = "<group>"; };
-		59574AAB1DFEFAD5005B6AD4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		59574AAD1DFEFAD5005B6AD4 /* Chrono.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chrono.h; sourceTree = "<group>"; };
 		59574AAE1DFEFAD5005B6AD4 /* Dispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dispatch.cpp; sourceTree = "<group>"; };
 		59574AAF1DFEFAD5005B6AD4 /* Dispatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dispatch.h; sourceTree = "<group>"; };
@@ -301,6 +388,16 @@
 		59574AD11DFEFAD5005B6AD4 /* WebServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebServer.cpp; sourceTree = "<group>"; };
 		59574AD21DFEFAD5005B6AD4 /* WebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServer.h; sourceTree = "<group>"; };
 		59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GroundBase.xcodeproj; path = ../FlyLab/GroundBase/GroundBase.xcodeproj; sourceTree = "<group>"; };
+		59574B9D1DFFE565005B6AD4 /* Tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tests; sourceTree = BUILT_PRODUCTS_DIR; };
+		59574BA21DFFE59F005B6AD4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Tests/main.cpp; sourceTree = "<group>"; };
+		59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyList.cpp; sourceTree = "<group>"; };
+		59574BA71DFFE89D005B6AD4 /* PropertyList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PropertyList.hpp; sourceTree = "<group>"; };
+		59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VariantUnitTest.cpp; path = Tests/VariantUnitTest.cpp; sourceTree = "<group>"; };
+		59EC754F1E004A8700EB37C2 /* VariantUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VariantUnitTest.hpp; path = Tests/VariantUnitTest.hpp; sourceTree = "<group>"; };
+		59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTestBase.cpp; path = Tests/UnitTestBase.cpp; sourceTree = "<group>"; };
+		59EC75561E004ADB00EB37C2 /* UnitTestBase.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UnitTestBase.hpp; path = Tests/UnitTestBase.hpp; sourceTree = "<group>"; };
+		59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PListUnitTest.cpp; path = Tests/PListUnitTest.cpp; sourceTree = "<group>"; };
+		59EC755A1E004DD700EB37C2 /* PListUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PListUnitTest.hpp; path = Tests/PListUnitTest.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +412,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59574B941DFFE565005B6AD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59574B951DFFE565005B6AD4 /* libGroundBase.dylib in Frameworks */,
+				59574B961DFFE565005B6AD4 /* libcurl.4.dylib in Frameworks */,
+				59574B971DFFE565005B6AD4 /* libfreetype.a in Frameworks */,
+				59574B981DFFE565005B6AD4 /* liboscpack.so.1.1.0 in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -324,6 +432,7 @@
 				59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */,
 				595749B01DFEFAD5005B6AD4 /* Core */,
 				595748121DFEF578005B6AD4 /* src */,
+				59574BA51DFFE5A8005B6AD4 /* Tests */,
 				595748091DFEF554005B6AD4 /* Products */,
 				595749A61DFEF72F005B6AD4 /* Frameworks */,
 			);
@@ -333,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				595748081DFEF554005B6AD4 /* Celesta */,
+				59574B9D1DFFE565005B6AD4 /* Tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -377,7 +487,6 @@
 				59574A8C1DFEFAD5005B6AD4 /* Network */,
 				59574A8F1DFEFAD5005B6AD4 /* Parsers */,
 				59574A9D1DFEFAD5005B6AD4 /* Plateforms */,
-				59574AAB1DFEFAD5005B6AD4 /* README.md */,
 				59574AAC1DFEFAD5005B6AD4 /* Scheduler */,
 				59574AB71DFEFAD5005B6AD4 /* UI */,
 				59574ACB1DFEFAD5005B6AD4 /* Web */,
@@ -610,6 +719,8 @@
 		59574A8F1DFEFAD5005B6AD4 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */,
+				59574BA71DFFE89D005B6AD4 /* PropertyList.hpp */,
 				59574A901DFEFAD5005B6AD4 /* cJSON */,
 				59574A931DFEFAD5005B6AD4 /* FontParser.cpp */,
 				59574A941DFEFAD5005B6AD4 /* FontParser.h */,
@@ -618,7 +729,6 @@
 				59574A971DFEFAD5005B6AD4 /* NanoSVG */,
 				59574A9A1DFEFAD5005B6AD4 /* SVGParser.cpp */,
 				59574A9B1DFEFAD5005B6AD4 /* SVGParser.h */,
-				59574A9C1DFEFAD5005B6AD4 /* XMLImp */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -639,13 +749,6 @@
 				59574A991DFEFAD5005B6AD4 /* nanosvgrast.h */,
 			);
 			path = NanoSVG;
-			sourceTree = "<group>";
-		};
-		59574A9C1DFEFAD5005B6AD4 /* XMLImp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = XMLImp;
 			sourceTree = "<group>";
 		};
 		59574A9D1DFEFAD5005B6AD4 /* Plateforms */ = {
@@ -778,6 +881,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		59574BA51DFFE5A8005B6AD4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				59574BA21DFFE59F005B6AD4 /* main.cpp */,
+				59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */,
+				59EC75561E004ADB00EB37C2 /* UnitTestBase.hpp */,
+				59EC75581E004D9F00EB37C2 /* UnitTests */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		59EC75581E004D9F00EB37C2 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */,
+				59EC754F1E004A8700EB37C2 /* VariantUnitTest.hpp */,
+				59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */,
+				59EC755A1E004DD700EB37C2 /* PListUnitTest.hpp */,
+			);
+			name = UnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -796,6 +921,23 @@
 			name = Celesta;
 			productName = CelestaCore;
 			productReference = 595748081DFEF554005B6AD4 /* Celesta */;
+			productType = "com.apple.product-type.tool";
+		};
+		59574B491DFFE565005B6AD4 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59574B9A1DFFE565005B6AD4 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				59574B4A1DFFE565005B6AD4 /* Sources */,
+				59574B941DFFE565005B6AD4 /* Frameworks */,
+				59574B991DFFE565005B6AD4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = CelestaCore;
+			productReference = 59574B9D1DFFE565005B6AD4 /* Tests */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -832,6 +974,7 @@
 			projectRoot = "";
 			targets = (
 				595748071DFEF554005B6AD4 /* Celesta */,
+				59574B491DFFE565005B6AD4 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -881,6 +1024,7 @@
 				59574B171DFEFAD5005B6AD4 /* Memory.cpp in Sources */,
 				59574B0F1DFEFAD5005B6AD4 /* GpioPlateformImpl.cpp in Sources */,
 				59574B241DFEFAD5005B6AD4 /* JSONParser.cpp in Sources */,
+				59574BA81DFFE89D005B6AD4 /* PropertyList.cpp in Sources */,
 				59574AE01DFEFAD5005B6AD4 /* GXFont.cpp in Sources */,
 				59574B0C1DFEFAD5005B6AD4 /* CanEvent.cpp in Sources */,
 				59574AEA1DFEFAD5005B6AD4 /* GraphicsComponents.cpp in Sources */,
@@ -905,7 +1049,6 @@
 				59574B231DFEFAD5005B6AD4 /* FontParser.cpp in Sources */,
 				59574B151DFEFAD5005B6AD4 /* Element.cpp in Sources */,
 				59574B361DFEFAD5005B6AD4 /* mongoose.c in Sources */,
-				59574B271DFEFAD5005B6AD4 /* README.md in Sources */,
 				59574B191DFEFAD5005B6AD4 /* Thread.cpp in Sources */,
 				59574AE31DFEFAD5005B6AD4 /* GXScene.cpp in Sources */,
 				595749AF1DFEFABE005B6AD4 /* Controller.cpp in Sources */,
@@ -945,6 +1088,88 @@
 				59574B101DFEFAD5005B6AD4 /* InterfaceController.cpp in Sources */,
 				59574B341DFEFAD5005B6AD4 /* UIViewController.cpp in Sources */,
 				59574AE91DFEFAD5005B6AD4 /* GXGeometry.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59574B4A1DFFE565005B6AD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59574B4B1DFFE565005B6AD4 /* UIView.cpp in Sources */,
+				59574B4C1DFFE565005B6AD4 /* GXAnimation.cpp in Sources */,
+				59574B4D1DFFE565005B6AD4 /* GXImage.cpp in Sources */,
+				59574B4E1DFFE565005B6AD4 /* GXTextRenderer.cpp in Sources */,
+				59574B4F1DFFE565005B6AD4 /* IPC.cpp in Sources */,
+				59574B501DFFE565005B6AD4 /* GpioInterface.cpp in Sources */,
+				59574B511DFFE565005B6AD4 /* Memory.cpp in Sources */,
+				59574B521DFFE565005B6AD4 /* GpioPlateformImpl.cpp in Sources */,
+				59574B531DFFE565005B6AD4 /* JSONParser.cpp in Sources */,
+				59574B541DFFE565005B6AD4 /* GXFont.cpp in Sources */,
+				59574B551DFFE565005B6AD4 /* CanEvent.cpp in Sources */,
+				59574B561DFFE565005B6AD4 /* GraphicsComponents.cpp in Sources */,
+				59EC75501E004A8700EB37C2 /* VariantUnitTest.cpp in Sources */,
+				59574B571DFFE565005B6AD4 /* DisplayImpl.cpp in Sources */,
+				59574B581DFFE565005B6AD4 /* InterfaceEvent.cpp in Sources */,
+				59574B591DFFE565005B6AD4 /* Event.cpp in Sources */,
+				59574B5A1DFFE565005B6AD4 /* UI.cpp in Sources */,
+				59574B5B1DFFE565005B6AD4 /* NetworkController.cpp in Sources */,
+				59574B5C1DFFE565005B6AD4 /* StringOperations.cpp in Sources */,
+				59574B5D1DFFE565005B6AD4 /* Date.cpp in Sources */,
+				59574B5E1DFFE565005B6AD4 /* CanPlateformImpl.cpp in Sources */,
+				59574B5F1DFFE565005B6AD4 /* GXAsyncPainter.cpp in Sources */,
+				59574B601DFFE565005B6AD4 /* Log.cpp in Sources */,
+				59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */,
+				59574B611DFFE565005B6AD4 /* JSMachine.cpp in Sources */,
+				59574B621DFFE565005B6AD4 /* Object.cpp in Sources */,
+				59574B641DFFE565005B6AD4 /* SVGParser.cpp in Sources */,
+				59EC75571E004ADB00EB37C2 /* UnitTestBase.cpp in Sources */,
+				59574B651DFFE565005B6AD4 /* GXPath.cpp in Sources */,
+				59574B661DFFE565005B6AD4 /* JSMachineDelegate.cpp in Sources */,
+				59574B671DFFE565005B6AD4 /* GXElement.cpp in Sources */,
+				59574B681DFFE565005B6AD4 /* GXTouch.cpp in Sources */,
+				59574B691DFFE565005B6AD4 /* FontParser.cpp in Sources */,
+				59574B6A1DFFE565005B6AD4 /* Element.cpp in Sources */,
+				59574B6B1DFFE565005B6AD4 /* mongoose.c in Sources */,
+				59574B6D1DFFE565005B6AD4 /* Thread.cpp in Sources */,
+				59574B6E1DFFE565005B6AD4 /* GXScene.cpp in Sources */,
+				59574BA31DFFE59F005B6AD4 /* main.cpp in Sources */,
+				59574B701DFFE565005B6AD4 /* TinyJS_MathFunctions.cpp in Sources */,
+				59574B711DFFE565005B6AD4 /* DisplayController.cpp in Sources */,
+				59574B721DFFE565005B6AD4 /* Url.cpp in Sources */,
+				59574B731DFFE565005B6AD4 /* GXColors.cpp in Sources */,
+				59574B741DFFE565005B6AD4 /* Dispatch.cpp in Sources */,
+				59574B751DFFE565005B6AD4 /* Timecode.cpp in Sources */,
+				59574B761DFFE565005B6AD4 /* UISlider.cpp in Sources */,
+				59574B771DFFE565005B6AD4 /* Database.cpp in Sources */,
+				59574B781DFFE565005B6AD4 /* WebServer.cpp in Sources */,
+				59574B791DFFE565005B6AD4 /* cJSON.c in Sources */,
+				59574B7A1DFFE565005B6AD4 /* AudioController.cpp in Sources */,
+				59574B7B1DFFE565005B6AD4 /* AUElement.cpp in Sources */,
+				59574B7C1DFFE565005B6AD4 /* AudioGraph.cpp in Sources */,
+				59574B7D1DFFE565005B6AD4 /* GXTransformations.cpp in Sources */,
+				59574B7E1DFFE565005B6AD4 /* UIVideo.cpp in Sources */,
+				59574B7F1DFFE565005B6AD4 /* SerialInterface.cpp in Sources */,
+				59574B801DFFE565005B6AD4 /* UIImage.cpp in Sources */,
+				59574B811DFFE565005B6AD4 /* Utils.cpp in Sources */,
+				59574B821DFFE565005B6AD4 /* UINotification.cpp in Sources */,
+				59574B831DFFE565005B6AD4 /* Peripherals.cpp in Sources */,
+				59574B841DFFE565005B6AD4 /* AbstractDelegate.cpp in Sources */,
+				59574B851DFFE565005B6AD4 /* AbstractController.cpp in Sources */,
+				59574B861DFFE565005B6AD4 /* TinyJS.cpp in Sources */,
+				59574B871DFFE565005B6AD4 /* TinyJS_Functions.cpp in Sources */,
+				59574B881DFFE565005B6AD4 /* GXVideo.cpp in Sources */,
+				59574B891DFFE565005B6AD4 /* UIButton.cpp in Sources */,
+				59574B8A1DFFE565005B6AD4 /* Painter.cpp in Sources */,
+				59574B8B1DFFE565005B6AD4 /* ApplicationBase.cpp in Sources */,
+				59574B8C1DFFE565005B6AD4 /* MainPlayer.cpp in Sources */,
+				59574B8D1DFFE565005B6AD4 /* FileManager.cpp in Sources */,
+				59574B8E1DFFE565005B6AD4 /* Variant.cpp in Sources */,
+				59574BA91DFFE89D005B6AD4 /* PropertyList.cpp in Sources */,
+				59574B8F1DFFE565005B6AD4 /* UILabel.cpp in Sources */,
+				59574B901DFFE565005B6AD4 /* FileSystem.cpp in Sources */,
+				59574B911DFFE565005B6AD4 /* InterfaceController.cpp in Sources */,
+				59574B921DFFE565005B6AD4 /* UIViewController.cpp in Sources */,
+				59574B931DFFE565005B6AD4 /* GXGeometry.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,6 +1317,60 @@
 			};
 			name = Release;
 		};
+		59574B9B1DFFE565005B6AD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					/usr/local/include/freetype2/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DENABLE_ELEMENT_SELECTOR",
+					"-DUSE_WEB_SERVER",
+					"-DUSE_JAVA_INTERPRETER",
+					"-DUSE_NETWORK",
+					"-DUSE_GPIO",
+					"-DUSE_GRAPHICS",
+					"-DUSE_GRAPHICS_HELPERS",
+					"-DUSE_GRAPHICS_EXTRA",
+					"-DHAVE_JPEG_LIB",
+					"-DUSE_JSON_PARSER",
+					"-DUSE_URL",
+					"-DUSE_GXTOUCH",
+					"-DUSE_GRAPHIC_UI",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		59574B9C1DFFE565005B6AD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					/usr/local/include/freetype2/,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib/;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DENABLE_ELEMENT_SELECTOR",
+					"-DUSE_WEB_SERVER",
+					"-DUSE_JAVA_INTERPRETER",
+					"-DUSE_NETWORK",
+					"-DUSE_GPIO",
+					"-DUSE_GRAPHICS",
+					"-DUSE_GRAPHICS_HELPERS",
+					"-DUSE_GRAPHICS_EXTRA",
+					"-DHAVE_JPEG_LIB",
+					"-DUSE_JSON_PARSER",
+					"-DUSE_URL",
+					"-DUSE_GXTOUCH",
+					"-DUSE_GRAPHIC_UI",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1109,6 +1388,15 @@
 			buildConfigurations = (
 				595748101DFEF554005B6AD4 /* Debug */,
 				595748111DFEF554005B6AD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59574B9A1DFFE565005B6AD4 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59574B9B1DFFE565005B6AD4 /* Debug */,
+				59574B9C1DFFE565005B6AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

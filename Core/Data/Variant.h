@@ -25,7 +25,7 @@ typedef std::pair<std::string , Variant> DataPair;
 class CScriptVar;
 #endif
 
-
+#include "Config.h"
 #include "../GXDataType/GXGeometry.h"
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
@@ -82,6 +82,8 @@ public:
     static VariantList createList( CScriptVar *var);
 #endif
     
+    
+    explicit Variant( GBRef gbObject);
 
     /* **** **** */
     
@@ -112,13 +114,18 @@ public:
 
     const std::vector< uint8_t > getByteArray() const;
     
-    const DataPair &getPair() const;
+    DataPair getPair() const;
     
+    GBRef getGBRef() const
+    {
+        return _value;
+    }
+    
+    /*
     //! careful! The type will not be checked, and reinterpret_cast may fail!
     template <typename T> T getValue() const;
-    
     template <typename T> void setValue(const T &val) const;
-    
+    */
     const std::type_info& getType() const
     {
         return typeid( this );
@@ -169,7 +176,8 @@ public:
 
 protected:
     
-    mutable ValueImpl* _variant;
+    //mutable ValueImpl* _variant;
+    GBObject* _value;
     
 /*
 private:

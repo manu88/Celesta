@@ -77,6 +77,12 @@
 #include "Parsers/JSONParser.h"
 #endif
 
+
+/*
+ 
+ */
+#include "Parsers/PropertyList.hpp"
+
 /* XML parser*/
 /*
     This module needs 'xerces' lib to be installed in standard include + lib paths

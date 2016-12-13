@@ -95,6 +95,7 @@ namespace ClassNames
 
     /* Parsers */
     static const std::string JSON_Document       = "JSONDocument";
+    static const std::string PListDocument       = "PList.Document";
 
     
     /* UI */

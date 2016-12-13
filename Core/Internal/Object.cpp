@@ -45,10 +45,11 @@ void ObjectWatcher::removeAndDeleteAllObjects(  )
 ObjectWatcher::~ObjectWatcher()
 {
     
+    /*
     removeAndDeleteAllObjects();
     
     DEBUG_ASSERT( _objList.size() == 0 );
-
+     */
 }
 
 void ObjectWatcher::addObject( Object* obj )
@@ -64,7 +65,8 @@ int Object::s_count = 0;
 //ObjectWatcher Object::s_watcher;
 
 
-Object::Object() noexcept
+Object::Object() noexcept :
+_gbPtr(nullptr)
 {
     num_obj = s_count++;
     

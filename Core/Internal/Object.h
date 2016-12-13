@@ -76,8 +76,11 @@ protected:
      */
     std::string className;
     int num_obj;
+    GBObject* _gbPtr; // pointer to GBObject instance. Can be NULL if the object is not an GRoundBase object
     
 private:
+    
+    
     
     //const Object *_parentObject;
     

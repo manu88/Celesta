@@ -9,6 +9,28 @@
 #ifndef Broadway_test_Config_h
 #define Broadway_test_Config_h
 
-#include "../../FlyLab/GroundBase/include/GroundBase.h"
+extern "C"
+{
+    #include "../../FlyLab/GroundBase/include/GroundBase.h"
+}
+
+
+
+
+struct ScopedGBRef
+{
+    ScopedGBRef( GBRef val):
+    value(val)
+    {}
+    
+    ~ScopedGBRef()
+    {
+        GBRelease( value);
+    }
+    
+    GBRef value;
+    
+};
+
 
 #endif
