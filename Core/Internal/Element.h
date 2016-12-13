@@ -62,7 +62,7 @@ public:
         Output   = ( 1 << 5 ), // 32
         
         File     = ( 1 << 6 ), // 64
-        System   = ( 1 << 7 )  // 182
+        System   = ( 1 << 7 )  // 128
         
     } TypeInfos;
     

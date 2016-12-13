@@ -30,7 +30,9 @@ class CScriptVar;
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
 
-
+/*
+ This is the public class
+ */
 
 class Variant
 {
@@ -163,9 +165,6 @@ public:
     bool operator==( const Variant& rhs) const;
     bool operator!=( const Variant& rhs) const;
     bool operator==( const void* ptr) const; // use this to test against nullptr
-    
-
-    
     
 
 protected:

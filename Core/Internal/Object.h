@@ -16,8 +16,7 @@
 
 #include "../Data/Variant.h"
 
-
-
+#include "../../../FlyLab/GroundBase/include/GroundBase.h"
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** */
 class Object;

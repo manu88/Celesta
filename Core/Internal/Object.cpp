@@ -14,8 +14,6 @@
 #include "../Config.h"
 
 
-
-
 void ObjectWatcher::removeObject( Object* obj )
 {
     

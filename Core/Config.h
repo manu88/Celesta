@@ -9,15 +9,6 @@
 #ifndef Broadway_test_Config_h
 #define Broadway_test_Config_h
 
-#include <assert.h>
-
-
-#ifdef BROADWAY_DEBUG
-    #define DEBUG_ASSERT(X) assert(X)
-#else
-    #define DEBUG_ASSERT(X) 
-#endif
-
-
+#include "../../FlyLab/GroundBase/include/GroundBase.h"
 
 #endif

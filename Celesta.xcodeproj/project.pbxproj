@@ -83,7 +83,39 @@
 		59574B351DFEFAD5005B6AD4 /* Url.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574ACC1DFEFAD5005B6AD4 /* Url.cpp */; };
 		59574B361DFEFAD5005B6AD4 /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = 59574ACF1DFEFAD5005B6AD4 /* mongoose.c */; };
 		59574B371DFEFAD5005B6AD4 /* WebServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574AD11DFEFAD5005B6AD4 /* WebServer.cpp */; };
+		59574B471DFFE16C005B6AD4 /* libGroundBase.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 59574B401DFFE15B005B6AD4 /* libGroundBase.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59574B3F1DFFE15B005B6AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59503D491D378D7400FDA861;
+			remoteInfo = GroundBase;
+		};
+		59574B411DFFE15B005B6AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59503D5F1D378DD400FDA861;
+			remoteInfo = TestGroundBase;
+		};
+		59574B431DFFE15B005B6AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59612C2C1DB6A32E005222E7;
+			remoteInfo = Server;
+		};
+		59574B451DFFE15B005B6AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59612C3B1DB6A3BA005222E7;
+			remoteInfo = Client;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		595748061DFEF554005B6AD4 /* CopyFiles */ = {
@@ -117,7 +149,6 @@
 		595749BC1DFEFAD5005B6AD4 /* AUElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AUElement.h; sourceTree = "<group>"; };
 		595749BE1DFEFAD5005B6AD4 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		595749BF1DFEFAD5005B6AD4 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		595749C11DFEFAD5005B6AD4 /* _ArgumentsArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _ArgumentsArray.h; sourceTree = "<group>"; };
 		595749C21DFEFAD5005B6AD4 /* Database.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Database.cpp; sourceTree = "<group>"; };
 		595749C31DFEFAD5005B6AD4 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		595749C41DFEFAD5005B6AD4 /* Date.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
@@ -269,6 +300,7 @@
 		59574AD01DFEFAD5005B6AD4 /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mongoose.h; sourceTree = "<group>"; };
 		59574AD11DFEFAD5005B6AD4 /* WebServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WebServer.cpp; sourceTree = "<group>"; };
 		59574AD21DFEFAD5005B6AD4 /* WebServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServer.h; sourceTree = "<group>"; };
+		59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GroundBase.xcodeproj; path = ../FlyLab/GroundBase/GroundBase.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59574B471DFFE16C005B6AD4 /* libGroundBase.dylib in Frameworks */,
 				595749AA1DFEF72F005B6AD4 /* libcurl.4.dylib in Frameworks */,
 				595749AB1DFEF72F005B6AD4 /* libfreetype.a in Frameworks */,
 				595749AC1DFEF72F005B6AD4 /* liboscpack.so.1.1.0 in Frameworks */,
@@ -288,6 +321,7 @@
 		595747FF1DFEF554005B6AD4 = {
 			isa = PBXGroup;
 			children = (
+				59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */,
 				595749B01DFEFAD5005B6AD4 /* Core */,
 				595748121DFEF578005B6AD4 /* src */,
 				595748091DFEF554005B6AD4 /* Products */,
@@ -386,7 +420,6 @@
 		595749C01DFEFAD5005B6AD4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				595749C11DFEFAD5005B6AD4 /* _ArgumentsArray.h */,
 				595749C21DFEFAD5005B6AD4 /* Database.cpp */,
 				595749C31DFEFAD5005B6AD4 /* Database.h */,
 				595749C41DFEFAD5005B6AD4 /* Date.cpp */,
@@ -734,6 +767,17 @@
 			path = web;
 			sourceTree = "<group>";
 		};
+		59574B391DFFE15A005B6AD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59574B401DFFE15B005B6AD4 /* libGroundBase.dylib */,
+				59574B421DFFE15B005B6AD4 /* TestGroundBase */,
+				59574B441DFFE15B005B6AD4 /* Server */,
+				59574B461DFFE15B005B6AD4 /* Client */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -779,12 +823,49 @@
 			mainGroup = 595747FF1DFEF554005B6AD4;
 			productRefGroup = 595748091DFEF554005B6AD4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 59574B391DFFE15A005B6AD4 /* Products */;
+					ProjectRef = 59574B381DFFE15A005B6AD4 /* GroundBase.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				595748071DFEF554005B6AD4 /* Celesta */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		59574B401DFFE15B005B6AD4 /* libGroundBase.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libGroundBase.dylib;
+			remoteRef = 59574B3F1DFFE15B005B6AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59574B421DFFE15B005B6AD4 /* TestGroundBase */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = TestGroundBase;
+			remoteRef = 59574B411DFFE15B005B6AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59574B441DFFE15B005B6AD4 /* Server */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Server;
+			remoteRef = 59574B431DFFE15B005B6AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		59574B461DFFE15B005B6AD4 /* Client */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Client;
+			remoteRef = 59574B451DFFE15B005B6AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		595748041DFEF554005B6AD4 /* Sources */ = {

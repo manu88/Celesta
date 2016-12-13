@@ -32,7 +32,7 @@ _thread     ( nullptr )
 Thread::~Thread()
 {
     
-    DEBUG_ASSERT( m_thread == nullptr );
+    DEBUG_ASSERT( _thread == nullptr );
     
     
     s_threadCount--;
