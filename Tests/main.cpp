@@ -14,7 +14,7 @@
 #include "PListUnitTest.hpp"
 #include "DictionaryUnitTest.hpp"
 #include "TimerUnitTest.hpp"
-
+#include "BinCoderUnitTest.hpp"
 
 int main(int argc, const char * argv[])
 {
@@ -28,7 +28,8 @@ int main(int argc, const char * argv[])
         tests.push_back( new VariantUnitTest() );
         tests.push_back( new DictionaryUnitTest());
         tests.push_back( new PListUnitTest() );
-        tests.push_back( new TimerUnitTest());
+        //tests.push_back( new TimerUnitTest());
+        tests.push_back( new BinCoderUnitTest());
         
         for( UnitTestBase* test : tests)
         {

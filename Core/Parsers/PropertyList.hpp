@@ -44,7 +44,10 @@ namespace PList
         
         bool contains( const std::string &key) const noexcept;
         
+        GBSize getSize() const;
+        
         bool save(const std::string &file);
+        
     };
 }
 

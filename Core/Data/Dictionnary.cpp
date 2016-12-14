@@ -34,7 +34,7 @@ Dictionary::~Dictionary()
 
 bool Dictionary::contains( const std::string &key) const noexcept
 {
-    GBString* k = GBStringInitWithCStr(key.c_str());
+    const GBString* k = GBStringInitWithCStr(key.c_str());
     
     const bool ret = GBDictionaryContains( getGBObject<const GBDictionary*>(), k);
     GBRelease(k);
@@ -45,7 +45,7 @@ bool Dictionary::addValueForKey(const Variant &value , const std::string &key) n
 {
     DEBUG_ASSERT( getGBRef() );
     
-    GBString*  k = GBStringInitWithCStr(key.c_str());
+    const GBString*  k = GBStringInitWithCStr(key.c_str());
     
     const bool ret = GBDictionaryAddValue(getGBObject<GBDictionary*>(), value.getGBRef(), k);
     GBRelease(k);
@@ -55,7 +55,7 @@ bool Dictionary::addValueForKey(const Variant &value , const std::string &key) n
 
 Variant Dictionary::getValueForKey( const std::string &key) const noexcept
 {
-    GBString*  k = GBStringInitWithCStr(key.c_str());
+    const GBString*  k = GBStringInitWithCStr(key.c_str());
     GBRef v= GBDictionaryGetValueForKey( getGBObject<const GBDictionary*>(), k);
     GBRelease(k);
     
@@ -69,7 +69,7 @@ Variant Dictionary::getValueForKey( const std::string &key) const noexcept
 
 bool Dictionary::remove(const std::string &key) noexcept
 {
-    GBString*  k = GBStringInitWithCStr(key.c_str());
+    const GBString*  k = GBStringInitWithCStr(key.c_str());
     const bool ret = GBDictionaryRemove(getGBObject< GBDictionary* >(), k);
     GBRelease(k);
     

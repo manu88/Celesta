@@ -211,6 +211,8 @@
 #include "Data/Database.h"
 #include "Data/Dictionnary.hpp"
 
+#include "Coders/BinCoder.hpp"
+
 #include "Internal/AttributesList.h"
 #include "Internal/FileSystem.h"
 #include "Internal/Utils.h"

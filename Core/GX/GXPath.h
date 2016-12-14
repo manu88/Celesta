@@ -161,7 +161,7 @@ public:
     
     //! add an ellipse.
     /*!
-     \param rect the rectangle bouding the ellipse to draw
+     \param boundingRect the rectangle bouding the ellipse to draw
      */
     void addEllipse ( const GXRect &boundingRect); // bug coordonnées
     void addArc     ( const GXPoint &center ,  const GXSize &size , float startAngle /* rads*/ , float angleExtent /* rads*/ ,GXArcType type );
@@ -220,12 +220,12 @@ public:
         m_shouldClearAfterRender = shouldI;
     }
     
+    void clearRect( const GXColor &color);
+    
     //! Get the global geometry of the path.
     /*!
         \return A rectangle bounding the drawed shape.
      */
-    
-    void clearRect( const GXColor &color);
     const GXRect &getBoundingRect() const;
     
     float getPathLenght() const;

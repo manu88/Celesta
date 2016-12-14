@@ -71,7 +71,7 @@ Variant PList::Document::getValueForKey( const std::string &key) const noexcept
 
 bool PList::Document::save(const std::string &file)
 {
-    GBString*  f = GBStringInitWithCStr( file.c_str() );
+    const GBString*  f = GBStringInitWithCStr( file.c_str() );
     const bool ret = GBPListSave(getGBObject<GBPList*>() , f);
     GBRelease(f);
     
@@ -81,7 +81,7 @@ bool PList::Document::save(const std::string &file)
 
 bool PList::Document::contains( const std::string &key) const noexcept
 {
-    GBString* k = GBStringInitWithCStr(key.c_str());
+    const GBString* k = GBStringInitWithCStr(key.c_str());
     
     const bool ret = GBPListContains(getGBObject<const GBPList*>() , k);
     GBRelease(k);
@@ -89,9 +89,14 @@ bool PList::Document::contains( const std::string &key) const noexcept
     return ret;
 }
 
+GBSize PList::Document::getSize() const
+{
+    return GBPListGetSize( getGBObject<const GBPList*>() );
+}
+
 bool PList::Document::remove(const std::string &key) noexcept
 {
-    GBString* k = GBStringInitWithCStr(key.c_str());
+    const GBString* k = GBStringInitWithCStr(key.c_str());
     
     const bool ret = GBPListRemove(getGBObject< GBPList*>() , k);    GBRelease(k);
     

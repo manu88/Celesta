@@ -1,10 +1,21 @@
-//
-//  JSONDocument.h
-//  Broadway_core
-//
-//  Created by Manuel Deneu on 08/01/15.
-//  Copyright (c) 2015 Manuel Deneu. All rights reserved.
-//
+/*
+ * Celesta
+ *
+ * Copyright (c) 2015 Manuel Deneu
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ */
 
 #ifndef __Broadway_core__JSONDocument__
 #define __Broadway_core__JSONDocument__
@@ -15,7 +26,8 @@
 #include "../Internal/Element.h"
 
 #include "cJSON/cJSON.h"
-
+#include "../Internal/GBObjectWrapper.hpp"
+#include "../Data/SequenceType.hpp"
 
 namespace JSON
 {
@@ -475,52 +487,38 @@ private:
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
     
-class Document : public Element
+class Document : public SequenceType, public Element , public GBObjectWrapper
 {
 public:
     
     Document();
+    Document( const std::string &file);
+    Document( const char* data , const GBSize dataSize);
     virtual ~Document();
     
-    bool parseFile( const std::string &file );
-    bool parseBuffer( const char* txtBuff);
+    /**/
+    
+    bool isValid() const;
+    
+    bool addValueForKey(const Variant &value , const std::string &key) noexcept;
+    Variant getValueForKey( const std::string &key) const noexcept;
+    bool contains( const std::string &key) const noexcept;
+    bool remove(const std::string &key) noexcept;
+    
+    GBSize getSize() const;
 
     static const std::string stringify( const JSON::Node &node );
-    bool saveFile( const std::string &file , bool minify);
     
-    bool hasErrors() const noexcept
-    {
-        return _hasErrors;
-    }
+    bool save( const std::string &file , bool minify);
     
-    const std::string &getError() const noexcept
-    {
-        return _firstError;
-    }
+    
 
-    
-    // return the root of the JSON database. can be NULL!!
-    Node &getRootNode()
-    {
-        /*
-        if( _json == nullptr)
-            createRootNode();
-        */
-        return _root;//  Node( _json , nullptr) ;
-    }
-    
-    // will return nullptr if not found
-    Node getNode( const std::string &name) const;
+
+
 protected:
     
 
 private:
-    
-    bool createRootNode();
-    
-    bool _hasErrors;
-    std::string _firstError;
-    Node _root;
 
 };
 

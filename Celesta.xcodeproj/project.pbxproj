@@ -166,6 +166,11 @@
 		59574BA31DFFE59F005B6AD4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA21DFFE59F005B6AD4 /* main.cpp */; };
 		59574BA81DFFE89D005B6AD4 /* PropertyList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */; };
 		59574BA91DFFE89D005B6AD4 /* PropertyList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */; };
+		59B9D57D1E013771008EFE39 /* AbstractCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9D57B1E013771008EFE39 /* AbstractCoder.cpp */; };
+		59B9D57E1E013771008EFE39 /* AbstractCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9D57B1E013771008EFE39 /* AbstractCoder.cpp */; };
+		59B9D5861E0137FD008EFE39 /* BinCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9D5841E0137FD008EFE39 /* BinCoder.cpp */; };
+		59B9D5871E0137FD008EFE39 /* BinCoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9D5841E0137FD008EFE39 /* BinCoder.cpp */; };
+		59B9D58A1E013831008EFE39 /* BinCoderUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59B9D5881E013831008EFE39 /* BinCoderUnitTest.cpp */; };
 		59EC75501E004A8700EB37C2 /* VariantUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */; };
 		59EC75571E004ADB00EB37C2 /* UnitTestBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */; };
 		59EC755B1E004DD700EB37C2 /* PListUnitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EC75591E004DD700EB37C2 /* PListUnitTest.cpp */; };
@@ -410,6 +415,12 @@
 		59574BA21DFFE59F005B6AD4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = Tests/main.cpp; sourceTree = "<group>"; };
 		59574BA61DFFE89D005B6AD4 /* PropertyList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyList.cpp; sourceTree = "<group>"; };
 		59574BA71DFFE89D005B6AD4 /* PropertyList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PropertyList.hpp; sourceTree = "<group>"; };
+		59B9D57B1E013771008EFE39 /* AbstractCoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AbstractCoder.cpp; path = Coders/AbstractCoder.cpp; sourceTree = "<group>"; };
+		59B9D57C1E013771008EFE39 /* AbstractCoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AbstractCoder.hpp; path = Coders/AbstractCoder.hpp; sourceTree = "<group>"; };
+		59B9D5841E0137FD008EFE39 /* BinCoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinCoder.cpp; path = Coders/BinCoder.cpp; sourceTree = "<group>"; };
+		59B9D5851E0137FD008EFE39 /* BinCoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinCoder.hpp; path = Coders/BinCoder.hpp; sourceTree = "<group>"; };
+		59B9D5881E013831008EFE39 /* BinCoderUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinCoderUnitTest.cpp; path = Tests/BinCoderUnitTest.cpp; sourceTree = "<group>"; };
+		59B9D5891E013831008EFE39 /* BinCoderUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinCoderUnitTest.hpp; path = Tests/BinCoderUnitTest.hpp; sourceTree = "<group>"; };
 		59EC754E1E004A8700EB37C2 /* VariantUnitTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VariantUnitTest.cpp; path = Tests/VariantUnitTest.cpp; sourceTree = "<group>"; };
 		59EC754F1E004A8700EB37C2 /* VariantUnitTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VariantUnitTest.hpp; path = Tests/VariantUnitTest.hpp; sourceTree = "<group>"; };
 		59EC75551E004ADB00EB37C2 /* UnitTestBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UnitTestBase.cpp; path = Tests/UnitTestBase.cpp; sourceTree = "<group>"; };
@@ -508,6 +519,7 @@
 		595749B01DFEFAD5005B6AD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				59B9D5831E013776008EFE39 /* Coders */,
 				59574A6A1DFEFAD5005B6AD4 /* Internal */,
 				5922E8831E0075BD00E988A1 /* RunLoop */,
 				595749B11DFEFAD5005B6AD4 /* Application */,
@@ -935,9 +947,22 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		59B9D5831E013776008EFE39 /* Coders */ = {
+			isa = PBXGroup;
+			children = (
+				59B9D57B1E013771008EFE39 /* AbstractCoder.cpp */,
+				59B9D57C1E013771008EFE39 /* AbstractCoder.hpp */,
+				59B9D5841E0137FD008EFE39 /* BinCoder.cpp */,
+				59B9D5851E0137FD008EFE39 /* BinCoder.hpp */,
+			);
+			name = Coders;
+			sourceTree = "<group>";
+		};
 		59EC75581E004D9F00EB37C2 /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				59B9D5881E013831008EFE39 /* BinCoderUnitTest.cpp */,
+				59B9D5891E013831008EFE39 /* BinCoderUnitTest.hpp */,
 				5922E8881E00773000E988A1 /* TimerUnitTest.cpp */,
 				5922E8891E00773000E988A1 /* TimerUnitTest.hpp */,
 				59EC75611E0060B000EB37C2 /* DictionaryUnitTest.cpp */,
@@ -1104,6 +1129,7 @@
 				59574ADC1DFEFAD5005B6AD4 /* DisplayController.cpp in Sources */,
 				59574B351DFEFAD5005B6AD4 /* Url.cpp in Sources */,
 				59574AE81DFEFAD5005B6AD4 /* GXColors.cpp in Sources */,
+				59B9D5861E0137FD008EFE39 /* BinCoder.cpp in Sources */,
 				59574B281DFEFAD5005B6AD4 /* Dispatch.cpp in Sources */,
 				59574B2B1DFEFAD5005B6AD4 /* Timecode.cpp in Sources */,
 				5922E87D1E0075B800E988A1 /* RunLoop.cpp in Sources */,
@@ -1137,6 +1163,7 @@
 				59574B2F1DFEFAD5005B6AD4 /* UILabel.cpp in Sources */,
 				59574B161DFEFAD5005B6AD4 /* FileSystem.cpp in Sources */,
 				59574B101DFEFAD5005B6AD4 /* InterfaceController.cpp in Sources */,
+				59B9D57D1E013771008EFE39 /* AbstractCoder.cpp in Sources */,
 				59574B341DFEFAD5005B6AD4 /* UIViewController.cpp in Sources */,
 				59574AE91DFEFAD5005B6AD4 /* GXGeometry.cpp in Sources */,
 			);
@@ -1164,6 +1191,7 @@
 				59574B581DFFE565005B6AD4 /* InterfaceEvent.cpp in Sources */,
 				59574B591DFFE565005B6AD4 /* Event.cpp in Sources */,
 				59574B5A1DFFE565005B6AD4 /* UI.cpp in Sources */,
+				59B9D58A1E013831008EFE39 /* BinCoderUnitTest.cpp in Sources */,
 				59574B5B1DFFE565005B6AD4 /* NetworkController.cpp in Sources */,
 				59574B5C1DFFE565005B6AD4 /* StringOperations.cpp in Sources */,
 				59574B5D1DFFE565005B6AD4 /* Date.cpp in Sources */,
@@ -1185,6 +1213,7 @@
 				59574B691DFFE565005B6AD4 /* FontParser.cpp in Sources */,
 				59574B6A1DFFE565005B6AD4 /* Element.cpp in Sources */,
 				59574B6B1DFFE565005B6AD4 /* mongoose.c in Sources */,
+				59B9D5871E0137FD008EFE39 /* BinCoder.cpp in Sources */,
 				59574B6D1DFFE565005B6AD4 /* Thread.cpp in Sources */,
 				59574B6E1DFFE565005B6AD4 /* GXScene.cpp in Sources */,
 				59574BA31DFFE59F005B6AD4 /* main.cpp in Sources */,
@@ -1219,6 +1248,7 @@
 				59574B891DFFE565005B6AD4 /* UIButton.cpp in Sources */,
 				59574B8A1DFFE565005B6AD4 /* Painter.cpp in Sources */,
 				59574B8B1DFFE565005B6AD4 /* ApplicationBase.cpp in Sources */,
+				59B9D57E1E013771008EFE39 /* AbstractCoder.cpp in Sources */,
 				59574B8C1DFFE565005B6AD4 /* MainPlayer.cpp in Sources */,
 				59574B8D1DFFE565005B6AD4 /* FileManager.cpp in Sources */,
 				59574B8E1DFFE565005B6AD4 /* Variant.cpp in Sources */,

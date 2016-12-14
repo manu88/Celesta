@@ -640,10 +640,13 @@ void JSMachine::clearStack()
 {
     const std::string txtBuf = v->getParameter("textBuffer")->getString();
     
-    JSON::Document doc;
-    if(doc.parseBuffer( txtBuf.c_str() ))
+    JSON::Document doc( txtBuf.c_str() , strlen( txtBuf.c_str() ) );
+    
+    if(doc.isValid())
     {
-        v->setReturnVar(  JSonParse( doc.getRootNode() ) );
+        DEBUG_ASSERT(0);
+        // impl pb
+        //v->setReturnVar(  JSonParse( doc.getRootNode() ) );
     }
     
 }
@@ -651,10 +654,12 @@ void JSMachine::clearStack()
 /*static*/ void JSMachine::js_parseJSONFile( CScriptVar *v, void * )
 {
     const std::string file = v->getParameter("file")->getString();
-    JSON::Document doc;
-    if(doc.parseFile( file ))
+    JSON::Document doc(file);
+    if( doc.isValid() )
     {
-        v->setReturnVar( JSonParse( doc.getRootNode() ) );
+        DEBUG_ASSERT(0);
+        // impl pb
+        //v->setReturnVar( JSonParse( doc.getRootNode() ) );
     }
 }
 
@@ -937,12 +942,8 @@ CScriptVar* JSMachine::getArgumentsAsJSArray( const VariantList &list )
 {
     CScriptVar *ret = new CScriptVar();
 
-
     jsonParseRecursive( node, ret );
-    
-    
 
-    
     return ret;
 }
 

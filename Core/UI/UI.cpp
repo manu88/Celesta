@@ -224,17 +224,19 @@ const Variant UIStoryBoard::performSelectorWithArguments( const std::string &sel
 #ifdef USE_JSON_PARSER
     else if( selector == "parseJSONFile")
     {
-        JSON::Document doc;
-        if(!doc.parseFile( arguments.at(0).getString() ))
+        JSON::Document doc(arguments.at(0).getString());
+        if(!doc.isValid() )
         {
-            printf("JSON parse error '%s' \n" , doc.getError().c_str() );
+            printf("JSON parse error \n"  );
             return Variant( false );
         }
-        
-        return Variant( parseJSON( doc.getRootNode() ) );
+        DEBUG_ASSERT(0); // implement ME
+        return Variant::null();//( parseJSON( doc.getRootNode() ) );
     }
     else if( selector == "saveJSON")
     {
+        DEBUG_ASSERT(0); // implement ME
+        /*
         JSON::Document doc;
 
         if( saveJSON( doc.getRootNode() ))
@@ -242,7 +244,7 @@ const Variant UIStoryBoard::performSelectorWithArguments( const std::string &sel
             doc.saveFile( arguments.at(0).getString() , false);
             return Variant( true );
         }
-
+         */
         return Variant( false );
     }
 #endif

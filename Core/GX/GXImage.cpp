@@ -282,7 +282,7 @@ void GXImage::changed()
 /*static*/ VGImage GXImage::createImageFromPng(const char *filename , int &w , int &h)
 {
     VGImage img = 0;
-
+    
     unsigned int width = -1;
     unsigned int height = -1;
     
