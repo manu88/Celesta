@@ -48,7 +48,7 @@ bool TimerUnitTest::test()
     Timer timer1;
     timer1.setInterval(1000);
     
-    runLoop.addTimer( timer1);
+    runLoop.addSource( timer1);
     
     MyTimer delegate;
     timer1.setDelegate(&delegate);

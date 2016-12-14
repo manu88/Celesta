@@ -80,6 +80,7 @@ public:
     
 protected:
 private:
+
     RunLoop* _currentRunLoop;
     TimerDelegate *_delegate;
     static void timerCallback( GBRunLoopSource* source , GBRunLoopSourceNotification notification);

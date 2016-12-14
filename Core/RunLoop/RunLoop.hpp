@@ -24,6 +24,10 @@
 #include "../Internal/GBObjectWrapper.hpp"
 #include "RunLoopSource.hpp"
 #include "Timer.hpp"
+
+/*
+ 
+ */
 class RunLoop : public Element , public GBObjectWrapper
 {
 public:
@@ -35,9 +39,9 @@ public:
     
     bool calledFromThisRunLoop() const;
     
-    bool addSource( const RunLoopSource &source);
+    bool addSource( RunLoopSource &source);
     
-    bool addTimer( Timer &timer);
+    bool addSource( Timer &timer);
     
     bool dispatchAsync(  GBRunLoopAsyncCallback callback, void* data);
     

@@ -79,6 +79,8 @@ RunLoop* Timer::getRunLoop() const noexcept
     return _currentRunLoop;
 }
 
+
+
 /*static*/ void Timer::timerCallback( GBRunLoopSource* source , GBRunLoopSourceNotification notification)
 {
     DEBUG_ASSERT(source);

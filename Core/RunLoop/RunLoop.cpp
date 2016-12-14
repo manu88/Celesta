@@ -46,14 +46,14 @@ bool RunLoop::calledFromThisRunLoop() const
     return CalledOnRunLoop( getGBObject<const GBRunLoop*>());
 }
 
-bool RunLoop::addSource( const RunLoopSource &source)
+bool RunLoop::addSource( RunLoopSource &source)
 {
     DEBUG_ASSERT(getGBRef());
     
     return false;
 }
 
-bool RunLoop::addTimer( Timer &timer)
+bool RunLoop::addSource( Timer &timer)
 {
     DEBUG_ASSERT(getGBRef());
     

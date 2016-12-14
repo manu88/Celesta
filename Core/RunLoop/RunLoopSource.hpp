@@ -20,9 +20,13 @@
 #ifndef RunLoopSource_hpp
 #define RunLoopSource_hpp
 
+class RunLoop;
+
 class RunLoopSource
 {
-    
+    friend class RunLoop;
+private:
+
 };
 
 #endif /* RunLoopSource_hpp */

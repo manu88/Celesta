@@ -66,7 +66,6 @@ Variant Dictionary::getValueForKey( const std::string &key) const noexcept
     
 }
 
-
 bool Dictionary::remove(const std::string &key) noexcept
 {
     const GBString*  k = GBStringInitWithCStr(key.c_str());
