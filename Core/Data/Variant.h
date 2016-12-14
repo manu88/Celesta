@@ -40,12 +40,9 @@ class CScriptVar;
 #include "../GXDataType/GXGeometry.h"
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
+#include "GBObjectWrapper.hpp"
 
-/*
- This is the public class
- */
-
-class Variant
+class Variant : GBObjectWrapper
 {
 public:
     
@@ -131,7 +128,7 @@ public:
     // don't use it unless you know what you're doing!
     GBRef getGBRef() const
     {
-        return _value;
+        return GBObjectWrapper::getGBRef();
     }
     
     /*
@@ -190,7 +187,7 @@ public:
 protected:
     
     //mutable ValueImpl* _variant;
-    GBObject* _value;
+    //GBObject* _value;
     
 /*
 private:

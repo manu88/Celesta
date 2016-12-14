@@ -20,10 +20,7 @@
 #ifndef GBObjectWrapper_h
 #define GBObjectWrapper_h
 
-
-#include "Object.h"
-
-
+#include "../../../FlyLab/GroundBase/include/GroundBase.h"
 
 class GBObjectWrapper 
 {

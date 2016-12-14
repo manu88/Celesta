@@ -22,6 +22,7 @@
 
 #include "../Config.h"
 #include "../Internal/GBObjectWrapper.hpp"
+#include "../Internal/Object.h"
 #include "Env_Variables.h"
 #include "SequenceType.hpp"
 
@@ -31,8 +32,6 @@ public:
     
     Dictionary();
     ~Dictionary();
-    
-    
     
     bool contains( const std::string &key) const noexcept;
     bool addValueForKey(const Variant &value , const std::string &key) noexcept;
