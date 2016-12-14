@@ -65,3 +65,22 @@ Variant Dictionary::getValueForKey( const std::string &key) const noexcept
     return Variant::null();
     
 }
+
+
+bool Dictionary::remove(const std::string &key) noexcept
+{
+    GBString*  k = GBStringInitWithCStr(key.c_str());
+    const bool ret = GBDictionaryRemove(getGBObject< GBDictionary* >(), k);
+    GBRelease(k);
+    
+    return ret;
+}
+
+GBSize Dictionary::getSize() const noexcept
+{
+    return GBDictionaryGetSize( getGBObject<const GBDictionary*>() );
+}
+
+
+
+

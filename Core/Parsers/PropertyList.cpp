@@ -88,3 +88,12 @@ bool PList::Document::contains( const std::string &key) const noexcept
     
     return ret;
 }
+
+bool PList::Document::remove(const std::string &key) noexcept
+{
+    GBString* k = GBStringInitWithCStr(key.c_str());
+    
+    const bool ret = GBPListRemove(getGBObject< GBPList*>() , k);    GBRelease(k);
+    
+    return ret;
+}

@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 #include <assert.h>
-
+#include <vector>
 #include "../Core/Core.h"
 #include "VariantUnitTest.hpp"
 #include "PListUnitTest.hpp"
@@ -23,19 +23,18 @@ int main(int argc, const char * argv[])
     printf("Starting Celesta unit Tests\n");
     
     {
-
-        VariantUnitTest t0;
-        t0.run();
+        std::vector<UnitTestBase*> tests;
         
-        PListUnitTest t1;
-        t1.run();
+        tests.push_back( new VariantUnitTest() );
+        tests.push_back( new DictionaryUnitTest());
+        tests.push_back( new PListUnitTest() );
+        tests.push_back( new TimerUnitTest());
         
-        
-        DictionaryUnitTest t2;
-        t2.run();
-        
-        TimerUnitTest t3;
-        t3.run();
+        for( UnitTestBase* test : tests)
+        {
+            test->run();
+            delete test;
+        }
         
     }
     

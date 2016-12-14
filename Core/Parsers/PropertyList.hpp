@@ -40,6 +40,7 @@ namespace PList
         
         bool addValueForKey( const Variant &value , const std::string &key) noexcept;
         Variant getValueForKey( const std::string &key) const noexcept;
+        bool remove(const std::string &key) noexcept;
         
         bool contains( const std::string &key) const noexcept;
         

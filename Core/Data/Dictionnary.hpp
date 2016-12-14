@@ -37,7 +37,9 @@ public:
     bool contains( const std::string &key) const noexcept;
     bool addValueForKey(const Variant &value , const std::string &key) noexcept;
     Variant getValueForKey( const std::string &key) const noexcept;
+    bool remove(const std::string &key) noexcept;
     
+    GBSize getSize() const noexcept;
 };
 
 #endif /* Dictionnary_hpp */

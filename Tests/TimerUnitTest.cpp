@@ -23,7 +23,7 @@ class MyTimer : public TimerDelegate
         printf("ontime1\n");
         accum++;
         
-        if( accum == 20)
+        if( accum == 10 )
         {
             printf("Send stop\n");
             getTimer()->getRunLoop()->stop();
@@ -34,9 +34,6 @@ class MyTimer : public TimerDelegate
     
     
 };
-
-
-
 
 TimerUnitTest::TimerUnitTest():
 UnitTestBase("Timer")

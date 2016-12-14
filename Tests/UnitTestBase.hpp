@@ -15,9 +15,10 @@ class UnitTestBase
 {
 public:
     bool run();
+    virtual ~UnitTestBase();
 protected:
     UnitTestBase(const std::string &name );
-    virtual ~UnitTestBase();
+    
     virtual bool test() = 0;
 private:
     std::string _name;

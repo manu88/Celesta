@@ -19,6 +19,9 @@ public:
     virtual bool addValueForKey(const Variant &value , const std::string &key) noexcept = 0;
     virtual Variant getValueForKey( const std::string &key) const noexcept = 0;
     virtual bool contains( const std::string &key) const noexcept = 0;
+    
+    virtual bool remove(const std::string &key) noexcept = 0;
+    
 };
 
 #endif /* SequenceType_h */
