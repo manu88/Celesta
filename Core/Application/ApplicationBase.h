@@ -20,7 +20,7 @@
 #define __MediaCenter__ApplicationBase__
 
 #include "../Data/Database.h"
-#include "../Scheduler/Dispatch.h"
+//#include "../Scheduler/Dispatch.h"
 #include "../Env_Variables.h"
 #include "../Plateforms/Plateform.h"
 
@@ -57,8 +57,9 @@ public:
             return false;
         
         _quitSent = true;
-        Dispatch::getInstance()->create( TimeToQuit , 0, std::bind(&ApplicationBase::releaseApp , this ) , TimerIdentifiers::QuitSignal );
-
+        
+        _runLoop.stop();
+        
         return true;
     }
     
@@ -198,15 +199,20 @@ protected:
     virtual void applicationWillStop();
     virtual void applicationDidStop();
 
+    const RunLoop &getRunLoop() const
+    {
+        return _runLoop;
+    }
+    
 private:
     
-    
+    RunLoop _runLoop;
     
     FileManager *_fileManager;
 
 
-    Database             _appData;
-    std::string           _fileConfig;
+    Database     _appData;
+    std::string  _fileConfig;
     
 
     

@@ -113,9 +113,7 @@ protected:
     
     void childRemoved( GXElement *element );
     
-#ifdef USE_JSON_PARSER
-    bool addJSONinfos( JSON::Node &node) const;
-#endif
+
 private:
 
     void reorderElements();    

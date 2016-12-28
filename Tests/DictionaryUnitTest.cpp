@@ -40,5 +40,7 @@ bool DictionaryUnitTest::test()
     assert(v1.isNull() == false);
     
     printf("v1 value '%s' \n" , v1.getString().c_str() );
+    
+    
     return true;
 }

@@ -21,9 +21,7 @@
 #include "../Env_Variables.h"
 #include "GXTransformations.h"
 
-#ifdef USE_JSON_PARSER
-#include "../Parsers/JSONParser.h"
-#endif
+
 
 class GXAnimation; // forward
 class DisplayController;
@@ -204,11 +202,7 @@ public:
     
     /* **** **** **** **** **** **** **** **** **** */
     
-#ifdef USE_JSON_PARSER
-    // create a stack of GXElements from a JSON file
-    const std::string stringify() const;
-    
-#endif
+
     
 #ifdef ENABLE_ELEMENT_SELECTOR
     const Variant performSelectorWithArguments( const std::string &selector , const VariantList  &arguments , bool *validCall = nullptr) ;
@@ -253,10 +247,7 @@ protected:
     void setStrokeColor( GXColor color );
     void setFillColor  ( GXColor color );
     
-#ifdef USE_JSON_PARSER
-    JSON::Node initNode() const;
-    virtual bool addJSONinfos( JSON::Node &node) const;
-#endif
+
 
 private:
     

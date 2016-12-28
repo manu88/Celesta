@@ -85,10 +85,5 @@ const Variant UILabel::performSelectorWithArguments( const std::string &selector
 }
 #endif
 
-#ifdef USE_JSON_PARSER
-bool UILabel::saveJSONSpec( JSON::Node &node) const
-{
-    return true;
-}
-#endif
+
 

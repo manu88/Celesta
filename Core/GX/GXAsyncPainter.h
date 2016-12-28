@@ -89,9 +89,7 @@ protected:
     void paint( const GXRect &rect , GXAnimation* anim );
     void changed();
     
-#ifdef USE_JSON_PARSER
-    bool addJSONinfos( JSON::Node &node) const;
-#endif
+
 private:
     std::vector<Painter*> m_paintOperations;
     

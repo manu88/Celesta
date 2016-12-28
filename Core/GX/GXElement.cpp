@@ -130,7 +130,7 @@ void GXElement::setBounds( const GXRect &bounds )
     {
         _bounds = bounds;
     
-        updateValueForKey(GXElementAttributes::Bounds, Variant(_bounds ));
+        //updateValueForKey(GXElementAttributes::Bounds, Variant(_bounds ));
 
         elementChanged();
     }
@@ -453,47 +453,6 @@ void GXElement::endTransformation()
     }
 }
 
-#ifdef USE_JSON_PARSER
-
-
-const std::string GXElement::stringify() const
-{
-    JSON::Node me = initNode();
-    addJSONinfos( me);
-    
-    
-    return JSON::Document::stringify( me );
-}
-
-JSON::Node GXElement::initNode() const
-{
-    JSON::Node me;
-    
-    me.addItem(GXElementAttributes::Class, Variant ( getClassName()   ) );
-    me.addItem(GXElementAttributes::Name, Variant ( getElementName() ) );
-    me.addItem(GXElementAttributes::Layer, Variant ( getLayer() ) );
-    me.addItem(GXElementAttributes::Transparent, Variant ( isTransparent() ) );
-    
-    JSON::Node b = me.addArray(GXElementAttributes::Bounds);
-    b.addItemToArray(Variant( getBounds().origin.x ));
-    b.addItemToArray(Variant( getBounds().origin.y ));
-    b.addItemToArray(Variant( getBounds().size.width ));
-    b.addItemToArray(Variant( getBounds().size.height ));
-    
-    JSON::Node c = me.addArray(GXElementAttributes::BackgroundColor);
-    c.addItemToArray(Variant( getBackgroundColor().r ) );
-    c.addItemToArray(Variant( getBackgroundColor().g ) );
-    c.addItemToArray(Variant( getBackgroundColor().b ) );
-    c.addItemToArray(Variant( getBackgroundColor().a ) );
-    
-    return me;
-}
-
-bool GXElement::addJSONinfos( JSON::Node &) const
-{
-    return false;
-}
-#endif
 
 /* **** **** **** **** **** **** **** **** **** **** **** */
 /* **** **** **** **** **** **** **** **** **** **** **** */
@@ -657,13 +616,7 @@ const Variant GXElement::performSelectorWithArguments( const std::string &select
     else if ( selector == "isOpaque")
         return Variant ( isOpaque() );
     
-#ifdef USE_JSON_PARSER
-    else if( selector == "stringify")
-    {
-        return Variant( stringify() );
-    }
-#endif
-    
+
     /* **** **** **** **** **** **** **** **** **** */
     /*
      void setHidden(  bool hidden);

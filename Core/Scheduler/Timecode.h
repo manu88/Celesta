@@ -18,7 +18,7 @@
 
 #include "../Data/StringOperations.h"
 
-#include "../Data/Variant.h"
+#include "Config.h"
 
 
 struct Timecode_t

@@ -87,10 +87,7 @@ public:
     const Variant performSelectorWithArguments( const std::string &selector , const VariantList  &arguments , bool *validCall = nullptr) ;
 #endif
 protected:
-    
-#ifdef USE_JSON_PARSER
-    bool addJSONinfos( JSON::Node &node) const;
-#endif
+
     
     
     float _size;

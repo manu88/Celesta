@@ -356,23 +356,7 @@ void GXScene::childRemoved( GXElement *element )
     _elements.erase( got );
 }
 
-#ifdef USE_JSON_PARSER
-bool GXScene::addJSONinfos( JSON::Node &node) const
-{
-    
-    JSON::Node child = node.addArray("children");
-    
-    for (const auto &el : getChildren() )
-    {
-        JSON::Node me = el->initNode();
 
-        el->addJSONinfos( me );
-        child.addItemToArray( me );
-        
-    }
-    return true;
-}
-#endif
 
 
 #ifdef ENABLE_ELEMENT_SELECTOR

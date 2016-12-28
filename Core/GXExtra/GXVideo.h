@@ -337,9 +337,7 @@ private:
     
     void sendNotification( GXVideoNotification notif );
     
-#ifdef USE_JSON_PARSER
-    bool addJSONinfos( JSON::Node &node) const;
-#endif
+
     
     Element     *_notifTarget;
     std::string  _notifSelector;

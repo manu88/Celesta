@@ -50,64 +50,6 @@ void UIWindow::setToDefaultValues()
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
-#ifdef USE_JSON_PARSER
-
-/*static*/ UIWindow* UIWindow::createFromJSON( const JSON::Node &node)
-{
-    UIWindow* win  = new UIWindow();
-    
-    win->parseJSON( node );
-    
-    return win;
-}
-
-bool UIWindow::parseJSON( const JSON::Node &node )
-{
-    const std::string name = node.getObjectItem(UIAttribute::Name).getString();
-
-    setElementName(name);
-    
-    const JSON::Node &children = node.getObjectItem( UIAttribute::Children );
-    
-    if( !children.isArray())
-    {
-        return false;
-    }
-    
-    for( const JSON::Node & child : children)
-    {
-        UIView* element = UIView::createUIElementFromJSON( child);
-        
-        if( element != nullptr)
-        {
-            addElement( element );
-        }
-
-    }
-    
-    
-    return false;
-}
-
-bool UIWindow::saveJSON( JSON::Node &node) const
-{
-    node.addItemToObject(Variant(getElementName()), UIAttribute::Name );
-    
-    JSON::Node children  = node.addArray( UIAttribute::Children );
-    
-    for (const GXElement *c : getChildren() )
-    {
-        const UIView* view = dynamic_cast<const UIView*>( c );
-        
-        JSON::Node child;
-        
-        if( view->saveJSON( child) )
-            children.addItemToArray(child);
-    }
-    
-    return true;
-}
-#endif
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
@@ -160,58 +102,6 @@ UIStoryBoard::~UIStoryBoard()
     _windows.clear();
 }
 
-#ifdef USE_JSON_PARSER
-bool UIStoryBoard::parseJSON( const JSON::Node &node)
-{
-    if( node.isInvalid())
-        return false;
-    
-    if( !node.getObjectItem( UIAttribute::Name ).isString())
-        return false;
-    
-    const std::string title = node.getObjectItem( UIAttribute::Name ).getString();
-    
-    setElementName(title);
-    
-    const JSON::Node &views = node.getObjectItem( UIAttribute::Children );
-    
-    if( !views.isArray())
-    {
-        return false;
-    }
-    
-    for( const JSON::Node & child : views)
-    {
-        UIWindow* childWin = UIWindow::createFromJSON( child );
-        
-        if( childWin != nullptr)
-            addWindow( childWin );
-
-    }
-
-    return true;
-}
-
-bool UIStoryBoard::saveJSON( JSON::Node &node) const
-{
-    
-    node.addItemToObject(Variant(getElementName()), UIAttribute::Name );
-    
-    JSON::Node children  = node.addArray( UIAttribute::Children );
-    for (const UIWindow *win : _windows )
-    {
-        JSON::Node child;
-        
-        if( win->saveJSON( child) )
-            children.addItemToArray(child);
-    }
-    
-    return true;
-}
-
-
-#endif
-
 #ifdef ENABLE_ELEMENT_SELECTOR
 const Variant UIStoryBoard::performSelectorWithArguments( const std::string &selector , const VariantList  &arguments, bool *validCall )
 {
@@ -221,33 +111,7 @@ const Variant UIStoryBoard::performSelectorWithArguments( const std::string &sel
     if( selector == "getNumWindows")
         return Variant( getNumWindows() );
     
-#ifdef USE_JSON_PARSER
-    else if( selector == "parseJSONFile")
-    {
-        JSON::Document doc(arguments.at(0).getString());
-        if(!doc.isValid() )
-        {
-            printf("JSON parse error \n"  );
-            return Variant( false );
-        }
-        DEBUG_ASSERT(0); // implement ME
-        return Variant::null();//( parseJSON( doc.getRootNode() ) );
-    }
-    else if( selector == "saveJSON")
-    {
-        DEBUG_ASSERT(0); // implement ME
-        /*
-        JSON::Document doc;
 
-        if( saveJSON( doc.getRootNode() ))
-        {
-            doc.saveFile( arguments.at(0).getString() , false);
-            return Variant( true );
-        }
-         */
-        return Variant( false );
-    }
-#endif
     
     else if( selector == "getWindowNamed")
     {

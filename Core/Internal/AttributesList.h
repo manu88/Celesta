@@ -24,7 +24,7 @@
 #include <map>
 #include <list>
 
-
+#include "Config.h"
 typedef std::map< std::string, Variant> ValuesList;
 
 /*

@@ -19,10 +19,9 @@
 #ifndef Broadway_test_Config_h
 #define Broadway_test_Config_h
 
-extern "C"
-{
-    #include "../../FlyLab/GroundBase/include/GroundBase.h"
-}
+
+#include "../../FlyLab/GroundBase-cpp/include/GroundBase.hpp"
+
 
 
 

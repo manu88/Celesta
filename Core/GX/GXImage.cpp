@@ -384,13 +384,6 @@ void GXImage::changed()
     
 }
 
-#ifdef USE_JSON_PARSER
-bool GXImage::addJSONinfos( JSON::Node &node) const
-{
-    node.addItem(GXElementAttributes::Ressource, Variant(getFileSource() ));
-    return  true;
-}
-#endif
 
 #ifdef ENABLE_ELEMENT_SELECTOR
 const Variant GXImage::performSelectorWithArguments( const std::string &selector , const VariantList  &arguments , bool *validCall)

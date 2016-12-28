@@ -30,10 +30,6 @@
 #include "UIJSON.h"
 
 
-#ifdef USE_JSON_PARSER
-#include "../Parsers/JSONParser.h"
-#endif
-
 /* **** **** **** **** **** **** **** **** **** **** **** **** */
 
 
@@ -54,12 +50,7 @@ public:
     
     void setToDefaultValues();
     
-#ifdef USE_JSON_PARSER
-    bool parseJSON( const JSON::Node &node);
-    bool saveJSON( JSON::Node &node) const;
-    
-    static UIWindow* createFromJSON( const JSON::Node &node);
-#endif
+
     
 
     void viewWillAppear();
@@ -113,11 +104,7 @@ public:
         
         return nullptr;
     }
-    
-#ifdef USE_JSON_PARSER
-    bool parseJSON( const JSON::Node &node);
-    bool saveJSON( JSON::Node &node) const;
-#endif
+
 
     
 #ifdef ENABLE_ELEMENT_SELECTOR

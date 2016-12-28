@@ -269,23 +269,6 @@ void GXTextRenderer::deleteRessources()
 }
 
 
-#ifdef USE_JSON_PARSER
-bool GXTextRenderer::addJSONinfos( JSON::Node &node) const
-{
-    if( getFont() != nullptr )
-        node.addItem( GXElementAttributes::Font , Variant( getFont()->getName() ));
-    
-    node.addItem(GXElementAttributes::FontSize, Variant( getSizeInPoints() ));
-    node.addItem(GXElementAttributes::Text , Variant( getDisplayedText() ));
-    
-    JSON::Node b = node.addArray( GXElementAttributes::TextColor );
-    b.addItemToArray(Variant( getTextColor().r ) );
-    b.addItemToArray(Variant( getTextColor().g ) );
-    b.addItemToArray(Variant( getTextColor().b ) );
-    b.addItemToArray(Variant( getTextColor().a ) );
-    return  true;
-}
-#endif
 
 
 #ifdef ENABLE_ELEMENT_SELECTOR

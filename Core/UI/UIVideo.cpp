@@ -106,29 +106,4 @@ const Variant UIVideo::performSelectorWithArguments( const std::string &selector
 }
 #endif
 
-#ifdef USE_JSON_PARSER
-/*static*/ UIVideo* UIVideo::createFromJSON( const JSON::Node &node )
-{
-    if( node.isInvalid() )
-        return nullptr;
-    
-    UIVideo *vid = new UIVideo();
-    
-    if( node.getObjectItem( UIAttribute::Ressource ).isString() )
-        vid->setVideoSource( node.getObjectItem(UIAttribute::Ressource).getString() );
-    
-    return vid;
-}
-
-bool UIVideo::saveJSONSpec( JSON::Node &node) const
-{
-    node.addItemToObject( Variant(_videoPlayer->getFileSource() ), UIAttribute::Ressource );
-
-    node.addItemToObject( Variant({ Variant(_videoPlayer->getBounds().size.width),
-                                    Variant(_videoPlayer->getBounds().size.height) }),
-                         UIAttribute::Size
-                         );
-    return true;
-}
-#endif
 

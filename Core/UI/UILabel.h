@@ -28,9 +28,7 @@ public:
 #endif
     
 protected:
-#ifdef USE_JSON_PARSER
-    bool saveJSONSpec( JSON::Node &node) const;
-#endif
+
     
 private:
     GXTextRenderer *_text;

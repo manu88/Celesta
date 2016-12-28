@@ -87,31 +87,10 @@
 
 
 
-/* JSON Parser*/
-/*
-    This module uses cJSON code
-    http://cjson.sourceforge.net/
- */
-#ifdef USE_JSON_PARSER
-#include "Parsers/JSONParser.h"
-#endif
 
 
 
 
-/*
- 
- */
-#include "Parsers/PropertyList.hpp"
-
-/* XML parser*/
-/*
-    This module needs 'xerces' lib to be installed in standard include + lib paths
-    http://xerces.apache.org/xerces-c/
- */
-#ifdef USE_XML_PARSER
-#include "Parsers/XMLParser.h"
-#endif
 
 /* HTML parser*/
 
@@ -207,18 +186,13 @@
 
 /* Core Headers */
 
-#include "Data/Variant.h"
-#include "Data/Database.h"
-#include "Data/Dictionnary.hpp"
 
-#include "Coders/BinCoder.hpp"
+#include "Data/Database.h"
 
 #include "Internal/AttributesList.h"
 #include "Internal/FileSystem.h"
 #include "Internal/Utils.h"
 
-#include "RunLoop/RunLoop.hpp"
-#include "RunLoop/Timer.hpp"
 
 #include "Scheduler/Chrono.h"
 #include "Scheduler/IPC.h"

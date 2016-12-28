@@ -21,10 +21,7 @@ class UIView : public GXScene, public GXTouchDelegate
 {
 public:
     
-#ifdef USE_JSON_PARSER
-    static UIView* createUIElementFromJSON( const JSON::Node &node );
-    bool saveJSON( JSON::Node &node) const;
-#endif
+
     
     virtual ~UIView() {}
     
@@ -74,10 +71,7 @@ protected:
     virtual void viewWillDisappear();
     virtual void viewDidDisappear();
    
-#ifdef USE_JSON_PARSER
-    bool parseJSONBase( const JSON::Node &node );
-    virtual bool saveJSONSpec( JSON::Node &node) const;
-#endif
+
     
     bool _touchesEnabled;
     std::string _selector;

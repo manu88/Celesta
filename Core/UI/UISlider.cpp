@@ -147,23 +147,4 @@ const Variant UISlider::performSelectorWithArguments( const std::string &selecto
 }
 #endif
 
-#ifdef USE_JSON_PARSER
-/*static*/ UISlider* UISlider::createFromJSON( const JSON::Node &node )
-{
-    if( node.isInvalid() )
-        return nullptr;
-    
-    UISlider *sl = new UISlider();
-    
-    if( node.getObjectItem( UIAttribute::Value ).isNumber() )
-        sl->setValue( static_cast<float>(  node.getObjectItem( UIAttribute::Value ).getDouble() ) );
-    
-    return sl;
-}
 
-bool UISlider::saveJSONSpec( JSON::Node &node) const
-{
-    return true;
-}
-
-#endif

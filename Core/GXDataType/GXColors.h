@@ -16,7 +16,8 @@
 #include <stdint.h>
 #include <vector>
 #include "GXGeometry.h"
-#include "../Data/Variant.h"
+#include "Config.h"
+
 
 /*! \file GXColors.h
  \brief public and internal color's description.

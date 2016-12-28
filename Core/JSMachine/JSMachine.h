@@ -35,9 +35,6 @@
 #define TINYJS_CALL_STACK
 #include "TinyJS/TinyJS.h"
 
-#ifdef USE_JSON_PARSER
-#include "../Parsers/JSONParser.h"
-#endif
 
 
 class JSMachineDelegate; // forward
@@ -207,11 +204,7 @@ public:
     static CScriptVar* getArgumentsAsJSArray( const VariantList &list );
     static CScriptVar* getArguments( const Variant *var);
     
-#ifdef USE_JSON_PARSER
-    static CScriptVar* JSonParse( const JSON::Node &node);
-    
-    // see jsonParseRecursive bellow
-#endif
+
     
     static std::string getArgumentsAsJSArrayString ( const VariantList &list );
     static std::string getArgumentsAsStringList    ( const VariantList &list );
@@ -349,10 +342,7 @@ protected:
     static void js_getObjectAt(CScriptVar *v, void *userdata);
 private:
     
-#ifdef USE_JSON_PARSER
-    static bool jsonParseRecursive( const JSON::Node &node , CScriptVar *var);
 
-#endif
     
     //! remove all selectors from the look-up table
     void removeAllRegisteredFunctions();

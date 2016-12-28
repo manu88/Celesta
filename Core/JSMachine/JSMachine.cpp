@@ -638,29 +638,13 @@ void JSMachine::clearStack()
 
 /*static*/ void JSMachine::js_parseJSON( CScriptVar *v, void * )
 {
-    const std::string txtBuf = v->getParameter("textBuffer")->getString();
     
-    JSON::Document doc( txtBuf.c_str() , strlen( txtBuf.c_str() ) );
-    
-    if(doc.isValid())
-    {
-        DEBUG_ASSERT(0);
-        // impl pb
-        //v->setReturnVar(  JSonParse( doc.getRootNode() ) );
-    }
     
 }
 
 /*static*/ void JSMachine::js_parseJSONFile( CScriptVar *v, void * )
 {
-    const std::string file = v->getParameter("file")->getString();
-    JSON::Document doc(file);
-    if( doc.isValid() )
-    {
-        DEBUG_ASSERT(0);
-        // impl pb
-        //v->setReturnVar( JSonParse( doc.getRootNode() ) );
-    }
+    
 }
 
 
@@ -936,80 +920,5 @@ CScriptVar* JSMachine::getArgumentsAsJSArray( const VariantList &list )
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** **** */
 
-#ifdef USE_JSON_PARSER
-
-/*static*/ CScriptVar* JSMachine::JSonParse( const JSON::Node & node)
-{
-    CScriptVar *ret = new CScriptVar();
-
-    jsonParseRecursive( node, ret );
-
-    return ret;
-}
-
-/*static*/ bool JSMachine::jsonParseRecursive( const JSON::Node &node , CScriptVar *var)
-{
-    bool ret = false;
-    
-    for ( const JSON::Node& nd  : node )
-    {
-
-        const std::string name = nd.getName();
-        
-        
-        if( nd.isNumber())
-        {
-            var->addChild(name , new CScriptVar( nd.getDouble() ) );
-        }
-        
-        else if( nd.isString() )
-        {
-            var->addChild(name , new CScriptVar( nd.getString() ));
-        }
-        else if( nd.isObject() )
-        {
-            jsonParseRecursive( nd , var->getParameter(name));
-        }
-        else if( nd.isArray() )
-        {
-
-            var->getParameter(name)->setArray();
-            
-            int i = 0;
-            for ( const JSON::Node& ndd  : nd )
-            {
-                if( ndd.isString() )
-                {
-                    var->getParameter(name)->setArrayIndex(i, new CScriptVar(ndd.getString() ) );
-                }
-                else if( ndd.isNumber())
-                    var->getParameter(name)->setArrayIndex(i, new CScriptVar(ndd.getDouble() ));
-                
-                else if( ndd.isObject() )
-                {
-                    CScriptVar *varr = new CScriptVar();
-                    jsonParseRecursive(ndd, varr);
-                    var->getParameter(name)->setArrayIndex(i, varr);
-                    
-                }
-                else
-                {
-                    printf(" Node name %s is type %i \n" , ndd.getName().c_str() , ndd.getType() );
-                    
-                }
-                
-                i++;
-                
-            }
-        }
-
-    }
-
-    
-    
-    return ret;
-}
-
-#endif
 
 

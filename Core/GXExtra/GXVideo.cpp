@@ -262,14 +262,6 @@ void GXVideo::sig_didReachTC( unsigned long /*millis*/)
     sendNotification( VideoDidReachTC );
 }
 
-#ifdef USE_JSON_PARSER
-bool GXVideo::addJSONinfos( JSON::Node &node) const
-{
-    node.addItem(GXElementAttributes::Ressource, Variant( getFileSource() ) );
-    return true;
-}
-#endif
-
 #ifdef ENABLE_ELEMENT_SELECTOR
 const Variant GXVideo::performSelectorWithArguments( const std::string &selector , const VariantList  &arguments , bool *validCall /*= nullptr*/)
 {

@@ -25,15 +25,8 @@ public:
 #ifdef ENABLE_ELEMENT_SELECTOR
     const Variant performSelectorWithArguments( const std::string &selector , const VariantList  &arguments , bool *validCall = nullptr) ;
 #endif
-    
-#ifdef USE_JSON_PARSER
-    static UIImage* createFromJSON( const JSON::Node &node );
-#endif
-    
+
 protected:
-#ifdef USE_JSON_PARSER
-    bool saveJSONSpec( JSON::Node &node) const;
-#endif
     
 private:
     GXImage *_image;

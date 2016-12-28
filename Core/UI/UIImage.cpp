@@ -70,23 +70,4 @@ const Variant UIImage::performSelectorWithArguments( const std::string &selector
 }
 #endif
 
-#ifdef USE_JSON_PARSER
-UIImage* UIImage::createFromJSON( const JSON::Node &node )
-{
-    if( node.isInvalid() )
-        return nullptr;
-    
-    UIImage *img = new UIImage();
-    
-    const std::string &file = node.getObjectItem( UIAttribute::Ressource ).getString();
-    img->setImageSource( file );
-    
-    return img;
-}
 
-bool UIImage::saveJSONSpec( JSON::Node &node) const
-{
-    node.addItemToObject( Variant( _image->getFileSource() ), UIAttribute::Ressource );
-    return true;
-}
-#endif

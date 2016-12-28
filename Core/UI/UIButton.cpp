@@ -269,42 +269,4 @@ const Variant UIButton::performSelectorWithArguments( const std::string &selecto
 
 
 
-#ifdef USE_JSON_PARSER
-/*static*/ UIButton* UIButton::createFromJSON( const JSON::Node &node )
-{
-    if( node.isInvalid() )
-        return nullptr;
-    
-    UIButton *btn = new UIButton();
-    
-    btn->setText( node.getObjectItem(  UIAttribute::Text ).getString() );
-    btn->setType( (UIButton::Type) node.getObjectItem(  UIAttribute::ButtonType ).getInt() );
-
-    
-    if( node.getObjectItem( UIAttribute::Value ).isNumber() )
-        btn->changeStateTo( (UIButton::State) node.getObjectItem( UIAttribute::Value ).getInt() );
-    
-    if( node.getObjectItem( UIAttribute::BackgroundColor).isArray() )
-        btn->setAttribute(UIAttribute::BackgroundColor, node.getObjectItem( UIAttribute::BackgroundColor).getValue());
-    
-    if( node.getObjectItem( UIAttribute::TextColor).isArray() )
-        btn->setAttribute(UIAttribute::TextColor, node.getObjectItem( UIAttribute::TextColor).getValue());
-
-    if( node.getObjectItem( UIAttribute::Font ).isString() )
-        btn->setAttribute( UIAttribute::Font, node.getObjectItem( UIAttribute::Font ).getValue());
-
-    return btn;
-    
-}
-
-bool UIButton::saveJSONSpec( JSON::Node &node) const
-{
-    node.addItemToObject(Variant(getText(UIButton::State::Normal)), UIAttribute::Text);
-    node.addItemToObject( Variant((int) getType() ) , UIAttribute::ButtonType );
-    
-    node.addItemToObject( GXColorGetVariant( _textColorNormal ), UIAttribute::TextColor );
-    node.addItemToObject( GXColorGetVariant( _backgroundColorNormal ), UIAttribute::BackgroundColor );
-    return true;
-}
-#endif
 

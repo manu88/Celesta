@@ -194,7 +194,8 @@ bool ApplicationBase::start()
         return false;
     do
     {
-        Dispatch::getInstance()->setAsMainThread();
+        
+        //Dispatch::getInstance()->setAsMainThread();
         
         _isInitialized = false;
         
@@ -217,14 +218,9 @@ bool ApplicationBase::start()
         
         _startTime = Timecode::getCurrent();
         
-        Dispatch::getInstance()->create( 10,
-                                         0,
-                                         std::bind(&ApplicationBase::applicationDidStart , this ) ,
-                                         TimerIdentifiers::ApplicationDidStart
-                                        );
+        _runLoop.dispatchAsync(std::bind(&ApplicationBase::applicationDidStart , this ));
         
-        Dispatch::getInstance()->run();
-
+        _runLoop.run();
         /* ... RUN HERE ...*/
         
         deletePidFile();
@@ -262,7 +258,7 @@ void ApplicationBase::releaseApp()
     
     _fileManager->deleteFile("sys/stats");
 
-    Dispatch::getInstance()->stop();
+
 }
 
 #ifdef ENABLE_ELEMENT_SELECTOR

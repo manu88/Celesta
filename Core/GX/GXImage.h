@@ -70,10 +70,7 @@ protected:
     void prepareRessources();
     void deleteRessources();
     void changed();
-    
-#ifdef USE_JSON_PARSER
-    bool addJSONinfos( JSON::Node &node) const;
-#endif
+
     
 private:
     
